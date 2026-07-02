@@ -1,26 +1,15 @@
-# Build
-/build/
-*.exe
-*.obj
+build/
 *.o
 *.a
-*.lib
+*.obj
+*.exe
 *.dll
-
-# VS / IDE
-.vs/
-*.suo
-*.user
-*.sln
-
-# Temp
-__pycache__/
-*.pyc
 *.log
-check_db.py
-
-# State files
-.consync_window
-.CoNSync.pem
-.CoNSync.register
-consync_fw.txt
+*.swp
+*.swo
+*~
+installer/CoNSync-*-Setup.exe
+installer/*.exe
+.ghtoken
+.ghdevice
+auth_script.*
