@@ -2874,6 +2874,15 @@ int main (int argc, char *argv[]) {
     std::string config_file = "";
 
 #ifdef _WIN32
+    /* Set GStreamer plugin path to bundled plugins */
+    {
+        char gst_path[MAX_PATH];
+        GetModuleFileNameA(NULL, gst_path, MAX_PATH);
+        char *p = strrchr(gst_path, '\\');
+        if (p) *p = 0;
+        strncat(gst_path, "\\gstreamer-1.0", MAX_PATH - strlen(gst_path) - 1);
+        SetEnvironmentVariableA("GST_PLUGIN_SYSTEM_PATH", gst_path);
+    }
     win32_window_init("CoNSync", 1280, 720);
 #endif
 
@@ -3308,4 +3317,5 @@ static void cleanup() {
 #endif
     exit(0);
 }
+
 

@@ -131,6 +131,9 @@ Section "Install" SecInstall
   CreateShortCut "$DESKTOP\${PRODUCT_NAME}.lnk" "$INSTDIR\CoNSync.exe" "" "$INSTDIR\CoNSync.exe" 0
   
   ; Registry for Add/Remove Programs
+  ; GStreamer plugin path
+  WriteRegExpandStr HKLM "SYSTEM\CurrentControlSet\Control\Session Manager\Environment" "GST_PLUGIN_SYSTEM_PATH" "$INSTDIR\gstreamer-1.0"
+
   WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\${PRODUCT_NAME}" "DisplayName" "${PRODUCT_NAME} - AirPlay Mirroring Server"
   WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\${PRODUCT_NAME}" "UninstallString" "$INSTDIR\Uninstall.exe"
   WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\${PRODUCT_NAME}" "QuietUninstallString" '"$INSTDIR\Uninstall.exe" /S'
@@ -154,6 +157,7 @@ SectionEnd
 Section "Uninstall"
   ; Remove firewall rule
   ExecWait '"$WINDIR\system32\netsh.exe" advfirewall firewall delete rule name="CoNSync AirPlay"'
+  DeleteRegValue HKLM "SYSTEM\CurrentControlSet\Control\Session Manager\Environment" "GST_PLUGIN_SYSTEM_PATH"
   
   ; Remove files
   Delete "$INSTDIR\CoNSync.exe"
@@ -174,3 +178,4 @@ Section "Uninstall"
   ; Auto-remove ProgramData state file if exists
   Delete "$APPDATA\CoNSync\window_state.ini"
 SectionEnd
+
