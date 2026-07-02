@@ -28,9 +28,8 @@ Section "Install"
   
   WriteUninstaller "$INSTDIR\Uninstall.exe"
   
-  ; Firewall
-  SimpleFC::AddApplication "CoNSync AirPlay" "$INSTDIR\CoNSync.exe" 0 2 "" 1
-  Pop $0
+  ; Firewall rule
+  ExecWait '"$WINDIR\system32\netsh.exe" advfirewall firewall add rule name="CoNSync AirPlay" dir=in action=allow program="$INSTDIR\CoNSync.exe" enable=yes profile=any'
   
   ; Shortcuts
   CreateDirectory "$SMPROGRAMS\CoNSync"
@@ -45,8 +44,8 @@ Section "Install"
 SectionEnd
 
 Section "Uninstall"
-  SimpleFC::RemoveApplicationByName "CoNSync AirPlay"
-  Pop $0
+  ; Remove firewall rule
+  ExecWait '"$WINDIR\system32\netsh.exe" advfirewall firewall delete rule name="CoNSync AirPlay"'
   Delete "$INSTDIR\CoNSync.exe"
   Delete "$INSTDIR\*.dll"
   Delete "$INSTDIR\Uninstall.exe"
@@ -57,3 +56,4 @@ Section "Uninstall"
   Delete "$DESKTOP\CoNSync.lnk"
   DeleteRegKey HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\CoNSync"
 SectionEnd
+
