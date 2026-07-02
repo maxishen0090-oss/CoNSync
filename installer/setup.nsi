@@ -11,8 +11,11 @@ RequestExecutionLevel admin
 Section "Install"
   SetOutPath "$INSTDIR"
   
+  ; CoNSync 主程序
   File "..\build\CoNSync.exe"
   File "..\bonjour_sdk\Lib\x64\dnssd.dll"
+  
+  ; 所有运行时 DLL
   File "..\build\libgcc_s_seh-1.dll"
   File "..\build\libstdc++-6.dll"
   File "..\build\libwinpthread-1.dll"
@@ -25,7 +28,29 @@ Section "Install"
   File "..\build\libgmodule-2.0-0.dll"
   File "..\build\libpcre2-8-0.dll"
   File "..\build\libiconv-2.dll"
+  File "..\build\libgstapp-1.0-0.dll"
+  File "..\build\libgstbase-1.0-0.dll"
+  File "..\build\libgstreamer-1.0-0.dll"
+  File "..\build\libgstvideo-1.0-0.dll"
+  File "..\build\liborc-0.4-0.dll"
+  File "..\build\libgstaudio-1.0-0.dll"
+  File "..\build\libgsttag-1.0-0.dll"
+  File "..\build\libgstpbutils-1.0-0.dll"
+  File "..\build\libgstcodecs-1.0-0.dll"
+  File "..\build\libgstcodecparsers-1.0-0.dll"
+  File "..\build\libgstd3d11-1.0-0.dll"
+  File "..\build\libgstd3dshader-1.0-0.dll"
+  File "..\build\libgstdxva-1.0-0.dll"
+  File "..\build\libgstallocators-1.0-0.dll"
+  File "..\build\libgstfft-1.0-0.dll"
+  File "..\build\libgstrtp-1.0-0.dll"
+  File "..\build\zlib1.dll"
   
+  ; GStreamer 插件
+  SetOutPath "$INSTDIR\gstreamer-1.0"
+  File "..\build\gstreamer-1.0\*.dll"
+  
+  SetOutPath "$INSTDIR"
   WriteUninstaller "$INSTDIR\Uninstall.exe"
   
   ; Firewall rule
@@ -48,6 +73,7 @@ Section "Uninstall"
   ExecWait '"$WINDIR\system32\netsh.exe" advfirewall firewall delete rule name="CoNSync AirPlay"'
   Delete "$INSTDIR\CoNSync.exe"
   Delete "$INSTDIR\*.dll"
+  RMDir /r "$INSTDIR\gstreamer-1.0"
   Delete "$INSTDIR\Uninstall.exe"
   RMDir "$INSTDIR"
   Delete "$SMPROGRAMS\CoNSync\CoNSync.lnk"
@@ -56,4 +82,3 @@ Section "Uninstall"
   Delete "$DESKTOP\CoNSync.lnk"
   DeleteRegKey HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\CoNSync"
 SectionEnd
-
