@@ -65,6 +65,7 @@
 #include "lib/logger.h"
 #include "lib/crypto.h"
 #include "renderers/video_renderer.h"
+#include "renderers/win32_window.h"
 #include "renderers/audio_renderer.h"
 #include "renderers/mux_renderer.h"
 #ifdef DBUS
@@ -159,7 +160,7 @@ static std::vector<std::string> allowed_clients;
 static std::vector<std::string> blocked_clients;
 static bool restrict_clients;
 static bool setup_legacy_pairing = false;
-static unsigned char pin_pw = 0;  /* 0: no client access control; 1: onscreen pin ; 2: require password (same password for all clients)  3: random pw*/
+static unsigned char pin_pw = 0;  /* 0: no PIN (default); 1: onscreen pin; 2: require password; 3: random pw*/
 static std::string password = "";
 static guint min_password_length = MIN_PASSWORD_LENGTH;
 static unsigned short pin = 0;
@@ -2700,6 +2701,7 @@ static int start_raop_server (unsigned short display[5], unsigned short tcp[3], 
     raop_cbs.check_register = check_register;
     raop_cbs.passwd = passwd;
     raop_cbs.export_dacp = export_dacp;
+#ifdef _WIN32
     raop_cbs.video_reset = video_reset;
     raop_cbs.video_set_codec = video_set_codec;
 #ifdef DBUS
@@ -2712,6 +2714,7 @@ static int start_raop_server (unsigned short display[5], unsigned short tcp[3], 
     raop_cbs.on_video_playlist_remove = on_video_playlist_remove;
     raop_cbs.on_video_acquire_playback_info = on_video_acquire_playback_info;
 
+#endif
     raop = raop_init(&raop_cbs);
     if (raop == NULL) {
         LOGE("Error initializing raop!");
@@ -2737,7 +2740,7 @@ static int start_raop_server (unsigned short display[5], unsigned short tcp[3], 
 
     if (show_client_FPS_data) raop_set_plist(raop, "clientFPSdata", 1);
     if (audiodelay >= 0) raop_set_plist(raop, "audio_delay_micros", audiodelay);
-    if (pin_pw == 1) raop_set_plist(raop, "pin", (int) pin);
+    if (pin_pw == 1) raop_set_plist(raop, "pin", (int) (pin > 0 ? pin : 1));
     if (hls_support) raop_set_plist(raop, "hls", 1);
 
     /* network port selection (ports listed as "0" will be dynamically assigned) */

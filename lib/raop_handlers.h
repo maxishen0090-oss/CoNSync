@@ -271,6 +271,11 @@ raop_handler_pairpinstart(raop_conn_t *conn,
          raop->callbacks.display_pin(raop->callbacks.cls, pin);
     }
     logger_log(raop->logger, LOGGER_INFO, "*** CLIENT MUST NOW ENTER PIN = \"%s\" AS AIRPLAY PASSWORD", pin);
+    printf("\n\n========================================\n");
+    printf("  ?? ??????? \n");
+    printf("  PIN: %s\n", pin);
+    printf("========================================\n\n");
+    fflush(stdout);
 }
 
 static void

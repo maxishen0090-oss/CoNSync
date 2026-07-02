@@ -1,21 +1,26 @@
-build/
+# Build
+/build/
 *.exe
 *.obj
 *.o
 *.a
-*.pyc
-__pycache__/
-*.swp
-*.swo
-.vscode/
-.idea/
-*.user
+*.lib
+*.dll
+
+# VS / IDE
+.vs/
 *.suo
-CMakeFiles/
-CMakeCache.txt
-cmake_install.cmake
-Makefile
-ninja.build
-.ninja_deps
-.ninja_log
-install_manifest.txt
+*.user
+*.sln
+
+# Temp
+__pycache__/
+*.pyc
+*.log
+check_db.py
+
+# State files
+.consync_window
+.CoNSync.pem
+.CoNSync.register
+consync_fw.txt

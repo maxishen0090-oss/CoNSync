@@ -53,6 +53,11 @@ add_library( renderers
 
 target_link_libraries ( renderers PUBLIC airplay )
 
+if ( WIN32 )
+  target_sources( renderers PRIVATE win32_window.c )
+  target_link_libraries( renderers PUBLIC dwmapi )
+endif()
+
 # hacks to fix cmake confusion due to links in path with macOS FrameWorks
 
 if( GST_INCLUDE_DIRS MATCHES "/Library/FrameWorks/GStreamer.framework/include" )
@@ -88,6 +93,7 @@ elseif( CMAKE_VERSION VERSION_LESS "3.12" )
 else()		  
   target_link_libraries( renderers PUBLIC ${GST_LINK_LIBRARIES} )
 endif()
+
 
 
 

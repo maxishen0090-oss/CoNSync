@@ -24,6 +24,14 @@
 #include <gst/app/gstappsrc.h>
 #include "video_renderer.h"
 
+#ifdef _WIN32
+#include <gst/video/videooverlay.h>
+#include "win32_window.h"
+#include <stdio.h>
+#endif
+
+
+
 #define SECOND_IN_NSECS 1000000000UL
 #define SECOND_IN_MICROSECS 1000000
 #ifdef X_DISPLAY_FIX
@@ -178,6 +186,14 @@ void video_renderer_size(float *f_width_source, float *f_height_source, float *f
     width = (unsigned short) *f_width;
     height = (unsigned short) *f_height;
     logger_log(logger, LOGGER_DEBUG, "begin video stream wxh = %dx%d; source %dx%d", width, height, width_source, height_source);
+#ifdef _WIN32
+    int sw = (int)*f_width_source;
+    int sh = (int)*f_height_source;
+    if (sw > 0 && sh > 0) {
+        win32_window_resize_to_video(sw, sh);
+    }
+#endif
+
 }
 
 GstElement *make_video_sink(const char *videosink, const char *videosink_options) {
@@ -249,6 +265,19 @@ g_string_replace (GString     *string,
 }
 #endif
 
+
+
+#ifdef _WIN32
+/* Called when autovideosink creates the actual video sink element */
+static void win32_on_sink_child_added(GstBin *bin, GstElement *child, gpointer user_data) {
+    (void)bin; (void)user_data;
+    if (!win32_window_get_handle()) return;
+    if (GST_IS_VIDEO_OVERLAY(child)) {
+        gst_video_overlay_set_window_handle(GST_VIDEO_OVERLAY(child), (guintptr)win32_window_get_handle());
+    }
+}
+#endif
+
 void video_renderer_init(logger_t *render_logger, const char *server_name, videoflip_t videoflip[2], const char *parser, const char * rtp_pipeline,
                           const char *decoder, const char *converter, const char *videosink, const char *videosink_options, 
                           bool initial_fullscreen, bool video_sync, bool h265_support, bool coverart_support, guint playbin_version, const char *uri) {
@@ -260,6 +289,10 @@ void video_renderer_init(logger_t *render_logger, const char *server_name, video
     auto_videosink = (strstr(videosink, "autovideosink") || strstr(videosink, "fpsdisplaysink"));
 
     logger = render_logger;
+#ifdef _WIN32
+    win32_setup_firewall();
+#endif
+
     logger_debug = (logger_get_level(logger) >= LOGGER_DEBUG);
     hls_seek_enabled = FALSE;
     hls_playing = FALSE;
@@ -430,6 +463,25 @@ void video_renderer_init(logger_t *render_logger, const char *server_name, video
             g_string_free(launch, TRUE);
             gst_caps_unref(caps);
             gst_object_unref(clock);
+#ifdef _WIN32
+            /* Create borderless video window and connect overlay */
+            if (!rtp && !jpeg_pipeline && !hls_video) {
+                if (!win32_window_get_handle()) {
+                    win32_window_init(server_name, 1280, 720);
+                }
+                char sink_name[128];
+                snprintf(sink_name, sizeof(sink_name), "%s_%s", videosink, renderer_type[i]->codec);
+                GstElement *sink = gst_bin_get_by_name(GST_BIN(renderer_type[i]->pipeline), sink_name);
+                if (sink) {
+                    g_signal_connect(sink, "child-added", G_CALLBACK(win32_on_sink_child_added), NULL);
+                    if (GST_IS_VIDEO_OVERLAY(sink)) {
+                        gst_video_overlay_set_window_handle(GST_VIDEO_OVERLAY(sink), (guintptr)win32_window_get_handle());
+                    }
+                    gst_object_unref(sink);
+                }
+            }
+#endif
+
             if (jpeg_pipeline) {
                  renderer_type[i]->textsrc = gst_bin_get_by_name(GST_BIN(renderer_type[i]->pipeline), "metadata_overlay");
                  g_object_set(G_OBJECT(renderer_type[i]->textsrc), "text", "", "shaded-background", TRUE, "font-desc", "Sans, 16",  NULL);
@@ -766,6 +818,9 @@ void video_renderer_destroy() {
             video_renderer_destroy_instance(renderer_type[i]);
         }
     }
+#ifdef _WIN32
+    win32_window_destroy();
+#endif
 }
 
 static void get_stream_status_name(GstStreamStatusType type, char *name, size_t len) {

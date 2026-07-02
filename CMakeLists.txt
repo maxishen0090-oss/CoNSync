@@ -75,8 +75,23 @@ if  ( GST_MACOS )
      message ( STATUS "define GST_MACOS" )
 endif()
 
+if ( WIN32 )
+  # Compile the Windows resource file for the application icon
+  set( APP_ICO_FILE "${CMAKE_CURRENT_SOURCE_DIR}/CoNSync.ico" )
+  set( APP_RES_FILE "${CMAKE_CURRENT_SOURCE_DIR}/CoNSync.rc" )
+  set( APP_RES_OBJ "${CMAKE_CURRENT_BINARY_DIR}/CoNSync_res.o" )
+  add_custom_command( OUTPUT ${APP_RES_OBJ}
+    COMMAND windres ${APP_RES_FILE} -O coff -o ${APP_RES_OBJ}
+    MAIN_DEPENDENCY ${APP_RES_FILE}
+    DEPENDS ${APP_ICO_FILE}
+    COMMENT "Compiling Windows resource file for application icon..." )
+endif()
+
 add_executable( CoNSync CoNSync.cpp )
 target_link_libraries( CoNSync renderers airplay )
+if ( WIN32 )
+  target_sources( CoNSync PRIVATE ${APP_RES_OBJ} )
+endif()
 if (DBUS_FOUND)
       target_link_libraries( CoNSync ${DBUS_LIBRARY})
 endif()
