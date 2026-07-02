@@ -2888,8 +2888,7 @@ int main (int argc, char *argv[]) {
 
 #ifdef _WIN32
     if (!SetConsoleCtrlHandler(CtrlHandler, TRUE)) {
-        LOGE("Could not set control handler");
-        exit(1);
+        LOGW("Could not set control handler (not a console app)");
     }
 #else
     signal(SIGINT, CtrlHandler);
@@ -3317,5 +3316,6 @@ static void cleanup() {
 #endif
     exit(0);
 }
+
 
 
