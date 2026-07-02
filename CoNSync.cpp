@@ -2874,6 +2874,10 @@ int main (int argc, char *argv[]) {
     std::string config_file = "";
 
 #ifdef _WIN32
+    win32_window_init("CoNSync", 1280, 720);
+#endif
+
+#ifdef _WIN32
     if (!SetConsoleCtrlHandler(CtrlHandler, TRUE)) {
         LOGE("Could not set control handler");
         exit(1);
@@ -3304,3 +3308,4 @@ static void cleanup() {
 #endif
     exit(0);
 }
+
