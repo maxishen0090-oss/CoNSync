@@ -1,0 +1,41 @@
+# === Build artifacts ===
+build/*.obj
+build/*.o
+build/*.a
+build/*.d
+build/*.ninja_deps
+build/*.ninja_log
+build/CMakeCache.txt
+build/CMakeFiles/
+build/cmake_install.cmake
+build/CoNSync_res.o
+build/test*.obj
+build/test*.exe
+build/libCoNSync.dll.a
+cmake-build-*/
+
+# === IDE ===
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# === OS ===
+.DS_Store
+Thumbs.db
+
+# === Temp files ===
+*.bak
+*.log
+window_debug.txt
+_plugin_deps.txt
+link_CoNSync.bat
+link_error.txt
+msys2_build.txt
+build_err.txt
+build_err_full.txt
+build/**/*.obj
+build/**/*.o
+build/**/*.a
+build/**/*.d

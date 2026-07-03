@@ -1,0 +1,14 @@
+[Unit]
+Description=AirPlay Unix mirroring server
+# uncomment next two lines if CoNSync is compiled to use avahi
+#Requires=avahi-daemon
+#After=avahi-daemon
+
+[Service]
+Type=simple
+ExecStart=CoNSync
+Restart=on-failure
+#StandardOutput=file:%h/CoNSync.log
+
+[Install]
+WantedBy=default.target
