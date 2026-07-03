@@ -39,3 +39,4 @@ build/**/*.obj
 build/**/*.o
 build/**/*.a
 build/**/*.d
+Release_Installer/*.exe
