@@ -1,67 +1,169 @@
 # CoNSync AirPlay Receiver
 
 [![Download](https://img.shields.io/github/v/release/maxishen0090-oss/CoNSync?color=blue&label=Download&style=for-the-badge)](https://github.com/maxishen0090-oss/CoNSync/releases/latest)
-[![Platform](https://img.shields.io/badge/Platform-Windows_11_x64-blue?style=for-the-badge)]()
-[![License](https://img.shields.io/badge/License-GPLv3-green?style=for-the-badge)](LICENSE)
+[![Windows](https://img.shields.io/badge/Windows-11%20%7C%2010-00A4EF?style=for-the-badge&logo=windows)]()
 
 ---
 
-将你的 Windows 电脑变成一个 **AirPlay 无线投屏接收器**。
-iOS / macOS / iPadOS 设备无需安装任何 App，通过系统自带的屏幕镜像功能即可投屏。
+**CoNSync** is a Windows-native AirPlay mirroring receiver. It lets you wirelessly mirror your iPhone, iPad, or Mac screen to any Windows PC — no Apple TV needed.
 
-## 快速开始
+This project is a fork of [uxplay](https://github.com/antimof/UxPlay), rewritten and heavily optimized for the Windows ecosystem. While uxplay focuses on macOS/Linux, CoNSync is built from the ground up for a native Windows experience.
 
-**[⬇ 下载最新安装包](https://github.com/maxishen0090-oss/CoNSync/releases/latest)**
+---
 
-1. 下载 `CoNSync_AirPlay_Receiver_Setup_1.74.exe`
-2. 双击运行，一路下一步（会自动提权配置防火墙）
-3. 安装完成后，iOS/macOS 设备打开控制中心 → 屏幕镜像 → 选择 **CoNSync**
+## Download & Install
 
-## 功能特性
+**[⬇ Download CoNSync_AirPlay_Receiver_Setup_1.74.exe](https://github.com/maxishen0090-oss/CoNSync/releases/latest)**
 
-| 功能 | 说明 |
-|------|------|
-| 屏幕镜像 | H.264 / H.265 视频 + AAC / ALAC 音频 |
-| 无边框窗口 | Windows 11 圆角支持 |
-| 窗口置顶 | F8 快捷键切换 |
-| 透明度调节 | Ctrl + 滚轮 / Ctrl + +/- |
-| 移动窗口 | Shift + 拖拽画面任意位置 |
-| 窗口状态记忆 | 关闭后自动记忆位置、大小、透明度 |
-| 系统托盘 | 关闭窗口自动缩到托盘，右键菜单管理 |
-| 网络自动修复 | 检测到公用网络或防火墙拦截时自动弹窗提权修复 |
-| 零依赖性 | 内置 mDNS 实现 + 捆绑 Bonjour 静默安装 |
-| 绿色便携 | 仓库中 `build_release.ps1` 可一键生成免安装版 |
+> **Size:** 63 MB | **Requires:** Windows 10 64-bit or later
 
-## 仓库内容
+1. Download and run the installer
+2. Click through the setup wizard (admin rights required for firewall config)
+3. On your iOS device: **Control Center → Screen Mirroring → CoNSync**
+4. On your Mac: **Control Center → Screen Mirroring → CoNSync**
+
+> **No extra software needed.** Everything is bundled — GStreamer runtime, codecs, Bonjour service, and all dependencies are included in the installer.
+
+---
+
+## Features
+
+### Streaming
+- **AirPlay mirroring** — mirror your iPhone/iPad/Mac screen in real time
+- **H.264 / H.265 hardware-accelerated video decoding**
+- **AAC / ALAC audio streaming** with WASAPI output
+- **Low-latency** streaming with audio-video sync
+
+### Window Management
+- **Borderless frameless window** with Windows 11 rounded corners
+- **Always-on-top toggle** — press F8
+- **Opacity control** — Ctrl + mouse wheel / Ctrl + `+` `-`
+- **Move window** — Shift + drag anywhere on the frame
+- **Smart resize** — locked aspect ratio; drag edges proportionally
+- **Window state persistence** — remembers position, size, opacity, and always-on-top setting across sessions
+- **Keyboard shortcut** `Ctrl+Shift+Q` — hide window to system tray
+
+### System Tray
+- Minimizes to system tray when window is closed
+- Right-click tray menu: **Open Interface** / **Exit Program**
+- Custom CoNSync icon in taskbar and tray
+
+### Network & Firewall
+- **Automatic firewall rule** configuration on install (all inbound protocols)
+- **Smart network detection** at launch — detects Public network profiles
+- **One-click UAC elevation** — switches network to Private and adds firewall rule with admin rights
+- **Bonjour/mDNS included** — Apple Bonjour service bundled and silently installed
+- **Built-in mDNS fallback** — pure C mDNS stack as alternative to Bonjour
+
+### Performance & Compatibility
+- **All x86-64 CPUs supported** — compiled with generic `-mtune`, no CPU-specific instructions
+- **Full FFmpeg codec support** — H.264, H.265, VP9, AV1, MP3, AAC, FLAC, Opus, and 50+ more codecs
+- **Direct3D 12 video rendering** — hardware-accelerated on compatible GPUs
+- **WASAPI audio output** — low-latency Windows audio
+
+---
+
+## What Makes CoNSync Different from uxplay
+
+| Area | uxplay (upstream) | CoNSync |
+|------|-------------------|---------|
+| **Platform focus** | macOS / Linux | **Windows 10/11 native** |
+| **Window integration** | Basic X11 window | **Borderless, rounded corners, opacity, always-on-top, persisted state** |
+| **System tray** | ❌ None | **Full system tray support with right-click menu** |
+| **Installer** | ❌ Source only | **63 MB self-contained installer with all dependencies** |
+| **Bonjour/mDNS** | Requires system Avahi/Bonjour | **Bundled Bonjour install + built-in mDNS fallback** |
+| **Firewall** | ❌ Manual setup | **Automatic firewall rule at install + runtime network detection** |
+| **Codec support** | System codecs only | **Bundled FFmpeg + 50+ codecs** |
+| **GStreamer** | Requires manual install | **Bundled GStreamer runtime + all plugins** |
+| **Zero-config** | ❌ Requires dependency setup | **True zero-config: click install, start mirroring** |
+| **Distribution** | Source + manual build | **Greenlight portable folder + Inno Setup installer + GitHub Releases** |
+
+---
+
+## Debug & Troubleshooting
+
+If you encounter issues, use the bundled debug launcher:
 
 ```
-CoNSync-master/
-├── CoNSync.cpp              ← AirPlay 协议栈主程序
-├── renderers/
-│   ├── win32_window.c       ← 窗口自定义功能（无边框/托盘/快捷键）
-│   ├── video_renderer.c     ← GStreamer 视频管道
-│   └── audio_renderer.c     ← GStreamer 音频管道
-├── lib/                     ← AirPlay 协议层
-├── Release_Installer/       ← 最终安装包（通过 Releases 下载）
-├── build_release.ps1        ← 一键生成绿色发布包
-├── CoNSync_Launcher.vbs     ← 静默启动器（无黑框）
-├── debug_mode.bat           ← 调试启动器（显示 GStreamer 日志）
-├── CoNSync_AirPlay_Receiver_Setup.iss  ← Inno Setup 安装包脚本
-├── Bonjour64.msi            ← Apple Bonjour 服务
-└── huifu/                   ← 完整源码备份
+debug_mode.bat
 ```
 
-## 从源码编译
+This opens a console window showing GStreamer logs, DLL loading status, and plugin initialization errors.
 
-需要 MSYS2 UCRT64 环境：
+Common issues:
+- **Firewall blocking** — run the installer again, or use `run_CoNSync_fw.bat` in the portable folder
+- **Can't find CoNSync on AirPlay** — ensure both devices are on the same network
+- **Black screen after connecting** — update your GPU driver, or use `-avdec` flag for software decoding
+
+---
+
+## Building from Source
+
+### Prerequisites
+1. [MSYS2](https://www.msys2.org/) with UCRT64 environment
+2. Install dependencies in UCRT64 terminal:
 
 ```bash
 pacman -S --needed mingw-w64-ucrt-x86_64-{gcc,cmake,ninja,gstreamer,gst-plugins-{base,good,bad},gst-libav,openssl,libplist,glib2}
-cd CoNSync-master && mkdir build && cd build
+```
+
+3. Apple Bonjour SDK (for mDNS): `C:\Program Files\Bonjour SDK\`
+
+### Build
+
+```bash
+cd CoNSync-master
+mkdir build && cd build
 cmake .. -G Ninja -DCMAKE_BUILD_TYPE=Release
 ninja -j$(nproc)
 ```
 
+### Package
+
+After building, generate a portable release folder:
+
+```powershell
+powershell -File build_release.ps1
+```
+
+Or compile the full installer (requires Inno Setup 6):
+
+```cmd
+ISCC.exe CoNSync_AirPlay_Receiver_Setup.iss
+```
+
+---
+
+## Repository Structure
+
+```
+CoNSync-master/
+├── CoNSync.cpp                  # Main AirPlay protocol stack (~3300 lines)
+├── renderers/
+│   ├── win32_window.c           # Window management (frameless, tray, shortcuts)
+│   ├── video_renderer.c         # GStreamer video pipeline
+│   └── audio_renderer.c         # GStreamer audio pipeline
+├── lib/                         # AirPlay protocol layer
+├── build_release.ps1            # One-click portable build script
+├── CoNSync_Launcher.vbs         # Silent launcher (no CMD window)
+├── debug_mode.bat               # Debug launcher (shows console logs)
+├── CoNSync_AirPlay_Receiver_Setup.iss  # Inno Setup installer script
+├── Bonjour64.msi                # Apple Bonjour service installer
+├── Release_Installer/           # Final installer (download from Releases)
+└── huifu/                       # Source backup
+```
+
+---
+
+## Credits
+
+- **[uxplay](https://github.com/antimof/UxPlay)** — the original AirPlay receiver project that inspired this Windows-native rewrite
+- **[RPiPlay](https://github.com/FD-/RPiPlay)** — codebase this project was originally forked from
+- **[GStreamer](https://gstreamer.freedesktop.org/)** — multimedia framework
+- **Apple Bonjour SDK** — mDNS service discovery
+
+---
+
 ## License
 
-GNU General Public License v3.0
+GNU General Public License v3.0. See [LICENSE](LICENSE).
