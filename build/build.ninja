@@ -39,7 +39,7 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = F$:/CoNSync/CoNSync-master/build/
+cmake_ninja_workdir = F$:/CNS/CoNSync/CoNSync-master/build/
 # =============================================================================
 # Object build statements for STATIC_LIBRARY target airplay
 
@@ -49,252 +49,252 @@ cmake_ninja_workdir = F$:/CoNSync/CoNSync-master/build/
 
 build cmake_object_order_depends_target_airplay: phony || cmake_object_order_depends_target_dnssd cmake_object_order_depends_target_llhttp cmake_object_order_depends_target_playfair
 
-build CMakeFiles/airplay.dir/CoNSync.cpp.obj: CXX_COMPILER__airplay_unscanned_Release F$:/CoNSync/CoNSync-master/CoNSync.cpp || cmake_object_order_depends_target_airplay
+build CMakeFiles/airplay.dir/CoNSync.cpp.obj: CXX_COMPILER__airplay_unscanned_Release F$:/CNS/CoNSync/CoNSync-master/CoNSync.cpp || cmake_object_order_depends_target_airplay
   CONFIG = Release
   DEFINES = -DNOHOLD -DOPENSSL_API_COMPAT=0x10101000L -DPLIST_210 -DPLIST_230
   DEP_FILE = CMakeFiles\airplay.dir\CoNSync.cpp.obj.d
   FLAGS = -O3 -DNDEBUG
-  INCLUDES = -IF:/CoNSync/CoNSync-master/playfair -IF:/CoNSync/CoNSync-master/llhttp -IF:/CoNSync/CoNSync-master/lib -IF:/msys64/ucrt64/bin/../include/glib-2.0 -IF:/msys64/ucrt64/bin/../lib/glib-2.0/include
+  INCLUDES = -IF:/CNS/CoNSync/CoNSync-master/playfair -IF:/CNS/CoNSync/CoNSync-master/llhttp -IF:/CNS/CoNSync/CoNSync-master/lib -IF:/msys64/ucrt64/bin/../include/glib-2.0 -IF:/msys64/ucrt64/bin/../lib/glib-2.0/include
   OBJECT_DIR = CMakeFiles\airplay.dir
   OBJECT_FILE_DIR = CMakeFiles\airplay.dir
   TARGET_COMPILE_PDB = CMakeFiles\airplay.dir\airplay.pdb
   TARGET_PDB = libairplay.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\airplay.dir
 
-build CMakeFiles/airplay.dir/lib/airplay_video.c.obj: C_COMPILER__airplay_unscanned_Release F$:/CoNSync/CoNSync-master/lib/airplay_video.c || cmake_object_order_depends_target_airplay
+build CMakeFiles/airplay.dir/lib/airplay_video.c.obj: C_COMPILER__airplay_unscanned_Release F$:/CNS/CoNSync/CoNSync-master/lib/airplay_video.c || cmake_object_order_depends_target_airplay
   CONFIG = Release
   DEFINES = -DNOHOLD -DOPENSSL_API_COMPAT=0x10101000L -DPLIST_210 -DPLIST_230
   DEP_FILE = CMakeFiles\airplay.dir\lib\airplay_video.c.obj.d
   FLAGS = -DSTANDALONE -D__STDC_CONSTANT_MACROS -D__STDC_LIMIT_MACROS -DTARGET_POSIX -D_WIN32 -fPIC -DPIC -D_REENTRANT -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Wall -O3 -mtune=generic  -O3 -DNDEBUG
-  INCLUDES = -IF:/CoNSync/CoNSync-master/playfair -IF:/CoNSync/CoNSync-master/llhttp -IF:/CoNSync/CoNSync-master/lib -IF:/msys64/ucrt64/bin/../include/glib-2.0 -IF:/msys64/ucrt64/bin/../lib/glib-2.0/include
+  INCLUDES = -IF:/CNS/CoNSync/CoNSync-master/playfair -IF:/CNS/CoNSync/CoNSync-master/llhttp -IF:/CNS/CoNSync/CoNSync-master/lib -IF:/msys64/ucrt64/bin/../include/glib-2.0 -IF:/msys64/ucrt64/bin/../lib/glib-2.0/include
   OBJECT_DIR = CMakeFiles\airplay.dir
   OBJECT_FILE_DIR = CMakeFiles\airplay.dir\lib
   TARGET_COMPILE_PDB = CMakeFiles\airplay.dir\airplay.pdb
   TARGET_PDB = libairplay.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\airplay.dir
 
-build CMakeFiles/airplay.dir/lib/byteutils.c.obj: C_COMPILER__airplay_unscanned_Release F$:/CoNSync/CoNSync-master/lib/byteutils.c || cmake_object_order_depends_target_airplay
+build CMakeFiles/airplay.dir/lib/byteutils.c.obj: C_COMPILER__airplay_unscanned_Release F$:/CNS/CoNSync/CoNSync-master/lib/byteutils.c || cmake_object_order_depends_target_airplay
   CONFIG = Release
   DEFINES = -DNOHOLD -DOPENSSL_API_COMPAT=0x10101000L -DPLIST_210 -DPLIST_230
   DEP_FILE = CMakeFiles\airplay.dir\lib\byteutils.c.obj.d
   FLAGS = -DSTANDALONE -D__STDC_CONSTANT_MACROS -D__STDC_LIMIT_MACROS -DTARGET_POSIX -D_WIN32 -fPIC -DPIC -D_REENTRANT -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Wall -O3 -mtune=generic  -O3 -DNDEBUG
-  INCLUDES = -IF:/CoNSync/CoNSync-master/playfair -IF:/CoNSync/CoNSync-master/llhttp -IF:/CoNSync/CoNSync-master/lib -IF:/msys64/ucrt64/bin/../include/glib-2.0 -IF:/msys64/ucrt64/bin/../lib/glib-2.0/include
+  INCLUDES = -IF:/CNS/CoNSync/CoNSync-master/playfair -IF:/CNS/CoNSync/CoNSync-master/llhttp -IF:/CNS/CoNSync/CoNSync-master/lib -IF:/msys64/ucrt64/bin/../include/glib-2.0 -IF:/msys64/ucrt64/bin/../lib/glib-2.0/include
   OBJECT_DIR = CMakeFiles\airplay.dir
   OBJECT_FILE_DIR = CMakeFiles\airplay.dir\lib
   TARGET_COMPILE_PDB = CMakeFiles\airplay.dir\airplay.pdb
   TARGET_PDB = libairplay.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\airplay.dir
 
-build CMakeFiles/airplay.dir/lib/compat.c.obj: C_COMPILER__airplay_unscanned_Release F$:/CoNSync/CoNSync-master/lib/compat.c || cmake_object_order_depends_target_airplay
+build CMakeFiles/airplay.dir/lib/compat.c.obj: C_COMPILER__airplay_unscanned_Release F$:/CNS/CoNSync/CoNSync-master/lib/compat.c || cmake_object_order_depends_target_airplay
   CONFIG = Release
   DEFINES = -DNOHOLD -DOPENSSL_API_COMPAT=0x10101000L -DPLIST_210 -DPLIST_230
   DEP_FILE = CMakeFiles\airplay.dir\lib\compat.c.obj.d
   FLAGS = -DSTANDALONE -D__STDC_CONSTANT_MACROS -D__STDC_LIMIT_MACROS -DTARGET_POSIX -D_WIN32 -fPIC -DPIC -D_REENTRANT -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Wall -O3 -mtune=generic  -O3 -DNDEBUG
-  INCLUDES = -IF:/CoNSync/CoNSync-master/playfair -IF:/CoNSync/CoNSync-master/llhttp -IF:/CoNSync/CoNSync-master/lib -IF:/msys64/ucrt64/bin/../include/glib-2.0 -IF:/msys64/ucrt64/bin/../lib/glib-2.0/include
+  INCLUDES = -IF:/CNS/CoNSync/CoNSync-master/playfair -IF:/CNS/CoNSync/CoNSync-master/llhttp -IF:/CNS/CoNSync/CoNSync-master/lib -IF:/msys64/ucrt64/bin/../include/glib-2.0 -IF:/msys64/ucrt64/bin/../lib/glib-2.0/include
   OBJECT_DIR = CMakeFiles\airplay.dir
   OBJECT_FILE_DIR = CMakeFiles\airplay.dir\lib
   TARGET_COMPILE_PDB = CMakeFiles\airplay.dir\airplay.pdb
   TARGET_PDB = libairplay.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\airplay.dir
 
-build CMakeFiles/airplay.dir/lib/crypto.c.obj: C_COMPILER__airplay_unscanned_Release F$:/CoNSync/CoNSync-master/lib/crypto.c || cmake_object_order_depends_target_airplay
+build CMakeFiles/airplay.dir/lib/crypto.c.obj: C_COMPILER__airplay_unscanned_Release F$:/CNS/CoNSync/CoNSync-master/lib/crypto.c || cmake_object_order_depends_target_airplay
   CONFIG = Release
   DEFINES = -DNOHOLD -DOPENSSL_API_COMPAT=0x10101000L -DPLIST_210 -DPLIST_230
   DEP_FILE = CMakeFiles\airplay.dir\lib\crypto.c.obj.d
   FLAGS = -DSTANDALONE -D__STDC_CONSTANT_MACROS -D__STDC_LIMIT_MACROS -DTARGET_POSIX -D_WIN32 -fPIC -DPIC -D_REENTRANT -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Wall -O3 -mtune=generic  -O3 -DNDEBUG
-  INCLUDES = -IF:/CoNSync/CoNSync-master/playfair -IF:/CoNSync/CoNSync-master/llhttp -IF:/CoNSync/CoNSync-master/lib -IF:/msys64/ucrt64/bin/../include/glib-2.0 -IF:/msys64/ucrt64/bin/../lib/glib-2.0/include
+  INCLUDES = -IF:/CNS/CoNSync/CoNSync-master/playfair -IF:/CNS/CoNSync/CoNSync-master/llhttp -IF:/CNS/CoNSync/CoNSync-master/lib -IF:/msys64/ucrt64/bin/../include/glib-2.0 -IF:/msys64/ucrt64/bin/../lib/glib-2.0/include
   OBJECT_DIR = CMakeFiles\airplay.dir
   OBJECT_FILE_DIR = CMakeFiles\airplay.dir\lib
   TARGET_COMPILE_PDB = CMakeFiles\airplay.dir\airplay.pdb
   TARGET_PDB = libairplay.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\airplay.dir
 
-build CMakeFiles/airplay.dir/lib/dnssd.c.obj: C_COMPILER__airplay_unscanned_Release F$:/CoNSync/CoNSync-master/lib/dnssd.c || cmake_object_order_depends_target_airplay
+build CMakeFiles/airplay.dir/lib/dnssd.c.obj: C_COMPILER__airplay_unscanned_Release F$:/CNS/CoNSync/CoNSync-master/lib/dnssd.c || cmake_object_order_depends_target_airplay
   CONFIG = Release
   DEFINES = -DNOHOLD -DOPENSSL_API_COMPAT=0x10101000L -DPLIST_210 -DPLIST_230
   DEP_FILE = CMakeFiles\airplay.dir\lib\dnssd.c.obj.d
   FLAGS = -DSTANDALONE -D__STDC_CONSTANT_MACROS -D__STDC_LIMIT_MACROS -DTARGET_POSIX -D_WIN32 -fPIC -DPIC -D_REENTRANT -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Wall -O3 -mtune=generic  -O3 -DNDEBUG
-  INCLUDES = -IF:/CoNSync/CoNSync-master/playfair -IF:/CoNSync/CoNSync-master/llhttp -IF:/CoNSync/CoNSync-master/lib -IF:/msys64/ucrt64/bin/../include/glib-2.0 -IF:/msys64/ucrt64/bin/../lib/glib-2.0/include
+  INCLUDES = -IF:/CNS/CoNSync/CoNSync-master/playfair -IF:/CNS/CoNSync/CoNSync-master/llhttp -IF:/CNS/CoNSync/CoNSync-master/lib -IF:/msys64/ucrt64/bin/../include/glib-2.0 -IF:/msys64/ucrt64/bin/../lib/glib-2.0/include
   OBJECT_DIR = CMakeFiles\airplay.dir
   OBJECT_FILE_DIR = CMakeFiles\airplay.dir\lib
   TARGET_COMPILE_PDB = CMakeFiles\airplay.dir\airplay.pdb
   TARGET_PDB = libairplay.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\airplay.dir
 
-build CMakeFiles/airplay.dir/lib/fairplay_playfair.c.obj: C_COMPILER__airplay_unscanned_Release F$:/CoNSync/CoNSync-master/lib/fairplay_playfair.c || cmake_object_order_depends_target_airplay
+build CMakeFiles/airplay.dir/lib/fairplay_playfair.c.obj: C_COMPILER__airplay_unscanned_Release F$:/CNS/CoNSync/CoNSync-master/lib/fairplay_playfair.c || cmake_object_order_depends_target_airplay
   CONFIG = Release
   DEFINES = -DNOHOLD -DOPENSSL_API_COMPAT=0x10101000L -DPLIST_210 -DPLIST_230
   DEP_FILE = CMakeFiles\airplay.dir\lib\fairplay_playfair.c.obj.d
   FLAGS = -DSTANDALONE -D__STDC_CONSTANT_MACROS -D__STDC_LIMIT_MACROS -DTARGET_POSIX -D_WIN32 -fPIC -DPIC -D_REENTRANT -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Wall -O3 -mtune=generic  -O3 -DNDEBUG
-  INCLUDES = -IF:/CoNSync/CoNSync-master/playfair -IF:/CoNSync/CoNSync-master/llhttp -IF:/CoNSync/CoNSync-master/lib -IF:/msys64/ucrt64/bin/../include/glib-2.0 -IF:/msys64/ucrt64/bin/../lib/glib-2.0/include
+  INCLUDES = -IF:/CNS/CoNSync/CoNSync-master/playfair -IF:/CNS/CoNSync/CoNSync-master/llhttp -IF:/CNS/CoNSync/CoNSync-master/lib -IF:/msys64/ucrt64/bin/../include/glib-2.0 -IF:/msys64/ucrt64/bin/../lib/glib-2.0/include
   OBJECT_DIR = CMakeFiles\airplay.dir
   OBJECT_FILE_DIR = CMakeFiles\airplay.dir\lib
   TARGET_COMPILE_PDB = CMakeFiles\airplay.dir\airplay.pdb
   TARGET_PDB = libairplay.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\airplay.dir
 
-build CMakeFiles/airplay.dir/lib/http_request.c.obj: C_COMPILER__airplay_unscanned_Release F$:/CoNSync/CoNSync-master/lib/http_request.c || cmake_object_order_depends_target_airplay
+build CMakeFiles/airplay.dir/lib/http_request.c.obj: C_COMPILER__airplay_unscanned_Release F$:/CNS/CoNSync/CoNSync-master/lib/http_request.c || cmake_object_order_depends_target_airplay
   CONFIG = Release
   DEFINES = -DNOHOLD -DOPENSSL_API_COMPAT=0x10101000L -DPLIST_210 -DPLIST_230
   DEP_FILE = CMakeFiles\airplay.dir\lib\http_request.c.obj.d
   FLAGS = -DSTANDALONE -D__STDC_CONSTANT_MACROS -D__STDC_LIMIT_MACROS -DTARGET_POSIX -D_WIN32 -fPIC -DPIC -D_REENTRANT -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Wall -O3 -mtune=generic  -O3 -DNDEBUG
-  INCLUDES = -IF:/CoNSync/CoNSync-master/playfair -IF:/CoNSync/CoNSync-master/llhttp -IF:/CoNSync/CoNSync-master/lib -IF:/msys64/ucrt64/bin/../include/glib-2.0 -IF:/msys64/ucrt64/bin/../lib/glib-2.0/include
+  INCLUDES = -IF:/CNS/CoNSync/CoNSync-master/playfair -IF:/CNS/CoNSync/CoNSync-master/llhttp -IF:/CNS/CoNSync/CoNSync-master/lib -IF:/msys64/ucrt64/bin/../include/glib-2.0 -IF:/msys64/ucrt64/bin/../lib/glib-2.0/include
   OBJECT_DIR = CMakeFiles\airplay.dir
   OBJECT_FILE_DIR = CMakeFiles\airplay.dir\lib
   TARGET_COMPILE_PDB = CMakeFiles\airplay.dir\airplay.pdb
   TARGET_PDB = libairplay.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\airplay.dir
 
-build CMakeFiles/airplay.dir/lib/http_response.c.obj: C_COMPILER__airplay_unscanned_Release F$:/CoNSync/CoNSync-master/lib/http_response.c || cmake_object_order_depends_target_airplay
+build CMakeFiles/airplay.dir/lib/http_response.c.obj: C_COMPILER__airplay_unscanned_Release F$:/CNS/CoNSync/CoNSync-master/lib/http_response.c || cmake_object_order_depends_target_airplay
   CONFIG = Release
   DEFINES = -DNOHOLD -DOPENSSL_API_COMPAT=0x10101000L -DPLIST_210 -DPLIST_230
   DEP_FILE = CMakeFiles\airplay.dir\lib\http_response.c.obj.d
   FLAGS = -DSTANDALONE -D__STDC_CONSTANT_MACROS -D__STDC_LIMIT_MACROS -DTARGET_POSIX -D_WIN32 -fPIC -DPIC -D_REENTRANT -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Wall -O3 -mtune=generic  -O3 -DNDEBUG
-  INCLUDES = -IF:/CoNSync/CoNSync-master/playfair -IF:/CoNSync/CoNSync-master/llhttp -IF:/CoNSync/CoNSync-master/lib -IF:/msys64/ucrt64/bin/../include/glib-2.0 -IF:/msys64/ucrt64/bin/../lib/glib-2.0/include
+  INCLUDES = -IF:/CNS/CoNSync/CoNSync-master/playfair -IF:/CNS/CoNSync/CoNSync-master/llhttp -IF:/CNS/CoNSync/CoNSync-master/lib -IF:/msys64/ucrt64/bin/../include/glib-2.0 -IF:/msys64/ucrt64/bin/../lib/glib-2.0/include
   OBJECT_DIR = CMakeFiles\airplay.dir
   OBJECT_FILE_DIR = CMakeFiles\airplay.dir\lib
   TARGET_COMPILE_PDB = CMakeFiles\airplay.dir\airplay.pdb
   TARGET_PDB = libairplay.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\airplay.dir
 
-build CMakeFiles/airplay.dir/lib/httpd.c.obj: C_COMPILER__airplay_unscanned_Release F$:/CoNSync/CoNSync-master/lib/httpd.c || cmake_object_order_depends_target_airplay
+build CMakeFiles/airplay.dir/lib/httpd.c.obj: C_COMPILER__airplay_unscanned_Release F$:/CNS/CoNSync/CoNSync-master/lib/httpd.c || cmake_object_order_depends_target_airplay
   CONFIG = Release
   DEFINES = -DNOHOLD -DOPENSSL_API_COMPAT=0x10101000L -DPLIST_210 -DPLIST_230
   DEP_FILE = CMakeFiles\airplay.dir\lib\httpd.c.obj.d
   FLAGS = -DSTANDALONE -D__STDC_CONSTANT_MACROS -D__STDC_LIMIT_MACROS -DTARGET_POSIX -D_WIN32 -fPIC -DPIC -D_REENTRANT -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Wall -O3 -mtune=generic  -O3 -DNDEBUG
-  INCLUDES = -IF:/CoNSync/CoNSync-master/playfair -IF:/CoNSync/CoNSync-master/llhttp -IF:/CoNSync/CoNSync-master/lib -IF:/msys64/ucrt64/bin/../include/glib-2.0 -IF:/msys64/ucrt64/bin/../lib/glib-2.0/include
+  INCLUDES = -IF:/CNS/CoNSync/CoNSync-master/playfair -IF:/CNS/CoNSync/CoNSync-master/llhttp -IF:/CNS/CoNSync/CoNSync-master/lib -IF:/msys64/ucrt64/bin/../include/glib-2.0 -IF:/msys64/ucrt64/bin/../lib/glib-2.0/include
   OBJECT_DIR = CMakeFiles\airplay.dir
   OBJECT_FILE_DIR = CMakeFiles\airplay.dir\lib
   TARGET_COMPILE_PDB = CMakeFiles\airplay.dir\airplay.pdb
   TARGET_PDB = libairplay.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\airplay.dir
 
-build CMakeFiles/airplay.dir/lib/logger.c.obj: C_COMPILER__airplay_unscanned_Release F$:/CoNSync/CoNSync-master/lib/logger.c || cmake_object_order_depends_target_airplay
+build CMakeFiles/airplay.dir/lib/logger.c.obj: C_COMPILER__airplay_unscanned_Release F$:/CNS/CoNSync/CoNSync-master/lib/logger.c || cmake_object_order_depends_target_airplay
   CONFIG = Release
   DEFINES = -DNOHOLD -DOPENSSL_API_COMPAT=0x10101000L -DPLIST_210 -DPLIST_230
   DEP_FILE = CMakeFiles\airplay.dir\lib\logger.c.obj.d
   FLAGS = -DSTANDALONE -D__STDC_CONSTANT_MACROS -D__STDC_LIMIT_MACROS -DTARGET_POSIX -D_WIN32 -fPIC -DPIC -D_REENTRANT -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Wall -O3 -mtune=generic  -O3 -DNDEBUG
-  INCLUDES = -IF:/CoNSync/CoNSync-master/playfair -IF:/CoNSync/CoNSync-master/llhttp -IF:/CoNSync/CoNSync-master/lib -IF:/msys64/ucrt64/bin/../include/glib-2.0 -IF:/msys64/ucrt64/bin/../lib/glib-2.0/include
+  INCLUDES = -IF:/CNS/CoNSync/CoNSync-master/playfair -IF:/CNS/CoNSync/CoNSync-master/llhttp -IF:/CNS/CoNSync/CoNSync-master/lib -IF:/msys64/ucrt64/bin/../include/glib-2.0 -IF:/msys64/ucrt64/bin/../lib/glib-2.0/include
   OBJECT_DIR = CMakeFiles\airplay.dir
   OBJECT_FILE_DIR = CMakeFiles\airplay.dir\lib
   TARGET_COMPILE_PDB = CMakeFiles\airplay.dir\airplay.pdb
   TARGET_PDB = libairplay.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\airplay.dir
 
-build CMakeFiles/airplay.dir/lib/mirror_buffer.c.obj: C_COMPILER__airplay_unscanned_Release F$:/CoNSync/CoNSync-master/lib/mirror_buffer.c || cmake_object_order_depends_target_airplay
+build CMakeFiles/airplay.dir/lib/mirror_buffer.c.obj: C_COMPILER__airplay_unscanned_Release F$:/CNS/CoNSync/CoNSync-master/lib/mirror_buffer.c || cmake_object_order_depends_target_airplay
   CONFIG = Release
   DEFINES = -DNOHOLD -DOPENSSL_API_COMPAT=0x10101000L -DPLIST_210 -DPLIST_230
   DEP_FILE = CMakeFiles\airplay.dir\lib\mirror_buffer.c.obj.d
   FLAGS = -DSTANDALONE -D__STDC_CONSTANT_MACROS -D__STDC_LIMIT_MACROS -DTARGET_POSIX -D_WIN32 -fPIC -DPIC -D_REENTRANT -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Wall -O3 -mtune=generic  -O3 -DNDEBUG
-  INCLUDES = -IF:/CoNSync/CoNSync-master/playfair -IF:/CoNSync/CoNSync-master/llhttp -IF:/CoNSync/CoNSync-master/lib -IF:/msys64/ucrt64/bin/../include/glib-2.0 -IF:/msys64/ucrt64/bin/../lib/glib-2.0/include
+  INCLUDES = -IF:/CNS/CoNSync/CoNSync-master/playfair -IF:/CNS/CoNSync/CoNSync-master/llhttp -IF:/CNS/CoNSync/CoNSync-master/lib -IF:/msys64/ucrt64/bin/../include/glib-2.0 -IF:/msys64/ucrt64/bin/../lib/glib-2.0/include
   OBJECT_DIR = CMakeFiles\airplay.dir
   OBJECT_FILE_DIR = CMakeFiles\airplay.dir\lib
   TARGET_COMPILE_PDB = CMakeFiles\airplay.dir\airplay.pdb
   TARGET_PDB = libairplay.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\airplay.dir
 
-build CMakeFiles/airplay.dir/lib/netutils.c.obj: C_COMPILER__airplay_unscanned_Release F$:/CoNSync/CoNSync-master/lib/netutils.c || cmake_object_order_depends_target_airplay
+build CMakeFiles/airplay.dir/lib/netutils.c.obj: C_COMPILER__airplay_unscanned_Release F$:/CNS/CoNSync/CoNSync-master/lib/netutils.c || cmake_object_order_depends_target_airplay
   CONFIG = Release
   DEFINES = -DNOHOLD -DOPENSSL_API_COMPAT=0x10101000L -DPLIST_210 -DPLIST_230
   DEP_FILE = CMakeFiles\airplay.dir\lib\netutils.c.obj.d
   FLAGS = -DSTANDALONE -D__STDC_CONSTANT_MACROS -D__STDC_LIMIT_MACROS -DTARGET_POSIX -D_WIN32 -fPIC -DPIC -D_REENTRANT -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Wall -O3 -mtune=generic  -O3 -DNDEBUG
-  INCLUDES = -IF:/CoNSync/CoNSync-master/playfair -IF:/CoNSync/CoNSync-master/llhttp -IF:/CoNSync/CoNSync-master/lib -IF:/msys64/ucrt64/bin/../include/glib-2.0 -IF:/msys64/ucrt64/bin/../lib/glib-2.0/include
+  INCLUDES = -IF:/CNS/CoNSync/CoNSync-master/playfair -IF:/CNS/CoNSync/CoNSync-master/llhttp -IF:/CNS/CoNSync/CoNSync-master/lib -IF:/msys64/ucrt64/bin/../include/glib-2.0 -IF:/msys64/ucrt64/bin/../lib/glib-2.0/include
   OBJECT_DIR = CMakeFiles\airplay.dir
   OBJECT_FILE_DIR = CMakeFiles\airplay.dir\lib
   TARGET_COMPILE_PDB = CMakeFiles\airplay.dir\airplay.pdb
   TARGET_PDB = libairplay.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\airplay.dir
 
-build CMakeFiles/airplay.dir/lib/pairing.c.obj: C_COMPILER__airplay_unscanned_Release F$:/CoNSync/CoNSync-master/lib/pairing.c || cmake_object_order_depends_target_airplay
+build CMakeFiles/airplay.dir/lib/pairing.c.obj: C_COMPILER__airplay_unscanned_Release F$:/CNS/CoNSync/CoNSync-master/lib/pairing.c || cmake_object_order_depends_target_airplay
   CONFIG = Release
   DEFINES = -DNOHOLD -DOPENSSL_API_COMPAT=0x10101000L -DPLIST_210 -DPLIST_230
   DEP_FILE = CMakeFiles\airplay.dir\lib\pairing.c.obj.d
   FLAGS = -DSTANDALONE -D__STDC_CONSTANT_MACROS -D__STDC_LIMIT_MACROS -DTARGET_POSIX -D_WIN32 -fPIC -DPIC -D_REENTRANT -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Wall -O3 -mtune=generic  -O3 -DNDEBUG
-  INCLUDES = -IF:/CoNSync/CoNSync-master/playfair -IF:/CoNSync/CoNSync-master/llhttp -IF:/CoNSync/CoNSync-master/lib -IF:/msys64/ucrt64/bin/../include/glib-2.0 -IF:/msys64/ucrt64/bin/../lib/glib-2.0/include
+  INCLUDES = -IF:/CNS/CoNSync/CoNSync-master/playfair -IF:/CNS/CoNSync/CoNSync-master/llhttp -IF:/CNS/CoNSync/CoNSync-master/lib -IF:/msys64/ucrt64/bin/../include/glib-2.0 -IF:/msys64/ucrt64/bin/../lib/glib-2.0/include
   OBJECT_DIR = CMakeFiles\airplay.dir
   OBJECT_FILE_DIR = CMakeFiles\airplay.dir\lib
   TARGET_COMPILE_PDB = CMakeFiles\airplay.dir\airplay.pdb
   TARGET_PDB = libairplay.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\airplay.dir
 
-build CMakeFiles/airplay.dir/lib/raop.c.obj: C_COMPILER__airplay_unscanned_Release F$:/CoNSync/CoNSync-master/lib/raop.c || cmake_object_order_depends_target_airplay
+build CMakeFiles/airplay.dir/lib/raop.c.obj: C_COMPILER__airplay_unscanned_Release F$:/CNS/CoNSync/CoNSync-master/lib/raop.c || cmake_object_order_depends_target_airplay
   CONFIG = Release
   DEFINES = -DNOHOLD -DOPENSSL_API_COMPAT=0x10101000L -DPLIST_210 -DPLIST_230
   DEP_FILE = CMakeFiles\airplay.dir\lib\raop.c.obj.d
   FLAGS = -DSTANDALONE -D__STDC_CONSTANT_MACROS -D__STDC_LIMIT_MACROS -DTARGET_POSIX -D_WIN32 -fPIC -DPIC -D_REENTRANT -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Wall -O3 -mtune=generic  -O3 -DNDEBUG
-  INCLUDES = -IF:/CoNSync/CoNSync-master/playfair -IF:/CoNSync/CoNSync-master/llhttp -IF:/CoNSync/CoNSync-master/lib -IF:/msys64/ucrt64/bin/../include/glib-2.0 -IF:/msys64/ucrt64/bin/../lib/glib-2.0/include
+  INCLUDES = -IF:/CNS/CoNSync/CoNSync-master/playfair -IF:/CNS/CoNSync/CoNSync-master/llhttp -IF:/CNS/CoNSync/CoNSync-master/lib -IF:/msys64/ucrt64/bin/../include/glib-2.0 -IF:/msys64/ucrt64/bin/../lib/glib-2.0/include
   OBJECT_DIR = CMakeFiles\airplay.dir
   OBJECT_FILE_DIR = CMakeFiles\airplay.dir\lib
   TARGET_COMPILE_PDB = CMakeFiles\airplay.dir\airplay.pdb
   TARGET_PDB = libairplay.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\airplay.dir
 
-build CMakeFiles/airplay.dir/lib/raop_buffer.c.obj: C_COMPILER__airplay_unscanned_Release F$:/CoNSync/CoNSync-master/lib/raop_buffer.c || cmake_object_order_depends_target_airplay
+build CMakeFiles/airplay.dir/lib/raop_buffer.c.obj: C_COMPILER__airplay_unscanned_Release F$:/CNS/CoNSync/CoNSync-master/lib/raop_buffer.c || cmake_object_order_depends_target_airplay
   CONFIG = Release
   DEFINES = -DNOHOLD -DOPENSSL_API_COMPAT=0x10101000L -DPLIST_210 -DPLIST_230
   DEP_FILE = CMakeFiles\airplay.dir\lib\raop_buffer.c.obj.d
   FLAGS = -DSTANDALONE -D__STDC_CONSTANT_MACROS -D__STDC_LIMIT_MACROS -DTARGET_POSIX -D_WIN32 -fPIC -DPIC -D_REENTRANT -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Wall -O3 -mtune=generic  -O3 -DNDEBUG
-  INCLUDES = -IF:/CoNSync/CoNSync-master/playfair -IF:/CoNSync/CoNSync-master/llhttp -IF:/CoNSync/CoNSync-master/lib -IF:/msys64/ucrt64/bin/../include/glib-2.0 -IF:/msys64/ucrt64/bin/../lib/glib-2.0/include
+  INCLUDES = -IF:/CNS/CoNSync/CoNSync-master/playfair -IF:/CNS/CoNSync/CoNSync-master/llhttp -IF:/CNS/CoNSync/CoNSync-master/lib -IF:/msys64/ucrt64/bin/../include/glib-2.0 -IF:/msys64/ucrt64/bin/../lib/glib-2.0/include
   OBJECT_DIR = CMakeFiles\airplay.dir
   OBJECT_FILE_DIR = CMakeFiles\airplay.dir\lib
   TARGET_COMPILE_PDB = CMakeFiles\airplay.dir\airplay.pdb
   TARGET_PDB = libairplay.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\airplay.dir
 
-build CMakeFiles/airplay.dir/lib/raop_ntp.c.obj: C_COMPILER__airplay_unscanned_Release F$:/CoNSync/CoNSync-master/lib/raop_ntp.c || cmake_object_order_depends_target_airplay
+build CMakeFiles/airplay.dir/lib/raop_ntp.c.obj: C_COMPILER__airplay_unscanned_Release F$:/CNS/CoNSync/CoNSync-master/lib/raop_ntp.c || cmake_object_order_depends_target_airplay
   CONFIG = Release
   DEFINES = -DNOHOLD -DOPENSSL_API_COMPAT=0x10101000L -DPLIST_210 -DPLIST_230
   DEP_FILE = CMakeFiles\airplay.dir\lib\raop_ntp.c.obj.d
   FLAGS = -DSTANDALONE -D__STDC_CONSTANT_MACROS -D__STDC_LIMIT_MACROS -DTARGET_POSIX -D_WIN32 -fPIC -DPIC -D_REENTRANT -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Wall -O3 -mtune=generic  -O3 -DNDEBUG
-  INCLUDES = -IF:/CoNSync/CoNSync-master/playfair -IF:/CoNSync/CoNSync-master/llhttp -IF:/CoNSync/CoNSync-master/lib -IF:/msys64/ucrt64/bin/../include/glib-2.0 -IF:/msys64/ucrt64/bin/../lib/glib-2.0/include
+  INCLUDES = -IF:/CNS/CoNSync/CoNSync-master/playfair -IF:/CNS/CoNSync/CoNSync-master/llhttp -IF:/CNS/CoNSync/CoNSync-master/lib -IF:/msys64/ucrt64/bin/../include/glib-2.0 -IF:/msys64/ucrt64/bin/../lib/glib-2.0/include
   OBJECT_DIR = CMakeFiles\airplay.dir
   OBJECT_FILE_DIR = CMakeFiles\airplay.dir\lib
   TARGET_COMPILE_PDB = CMakeFiles\airplay.dir\airplay.pdb
   TARGET_PDB = libairplay.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\airplay.dir
 
-build CMakeFiles/airplay.dir/lib/raop_rtp.c.obj: C_COMPILER__airplay_unscanned_Release F$:/CoNSync/CoNSync-master/lib/raop_rtp.c || cmake_object_order_depends_target_airplay
+build CMakeFiles/airplay.dir/lib/raop_rtp.c.obj: C_COMPILER__airplay_unscanned_Release F$:/CNS/CoNSync/CoNSync-master/lib/raop_rtp.c || cmake_object_order_depends_target_airplay
   CONFIG = Release
   DEFINES = -DNOHOLD -DOPENSSL_API_COMPAT=0x10101000L -DPLIST_210 -DPLIST_230
   DEP_FILE = CMakeFiles\airplay.dir\lib\raop_rtp.c.obj.d
   FLAGS = -DSTANDALONE -D__STDC_CONSTANT_MACROS -D__STDC_LIMIT_MACROS -DTARGET_POSIX -D_WIN32 -fPIC -DPIC -D_REENTRANT -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Wall -O3 -mtune=generic  -O3 -DNDEBUG
-  INCLUDES = -IF:/CoNSync/CoNSync-master/playfair -IF:/CoNSync/CoNSync-master/llhttp -IF:/CoNSync/CoNSync-master/lib -IF:/msys64/ucrt64/bin/../include/glib-2.0 -IF:/msys64/ucrt64/bin/../lib/glib-2.0/include
+  INCLUDES = -IF:/CNS/CoNSync/CoNSync-master/playfair -IF:/CNS/CoNSync/CoNSync-master/llhttp -IF:/CNS/CoNSync/CoNSync-master/lib -IF:/msys64/ucrt64/bin/../include/glib-2.0 -IF:/msys64/ucrt64/bin/../lib/glib-2.0/include
   OBJECT_DIR = CMakeFiles\airplay.dir
   OBJECT_FILE_DIR = CMakeFiles\airplay.dir\lib
   TARGET_COMPILE_PDB = CMakeFiles\airplay.dir\airplay.pdb
   TARGET_PDB = libairplay.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\airplay.dir
 
-build CMakeFiles/airplay.dir/lib/raop_rtp_mirror.c.obj: C_COMPILER__airplay_unscanned_Release F$:/CoNSync/CoNSync-master/lib/raop_rtp_mirror.c || cmake_object_order_depends_target_airplay
+build CMakeFiles/airplay.dir/lib/raop_rtp_mirror.c.obj: C_COMPILER__airplay_unscanned_Release F$:/CNS/CoNSync/CoNSync-master/lib/raop_rtp_mirror.c || cmake_object_order_depends_target_airplay
   CONFIG = Release
   DEFINES = -DNOHOLD -DOPENSSL_API_COMPAT=0x10101000L -DPLIST_210 -DPLIST_230
   DEP_FILE = CMakeFiles\airplay.dir\lib\raop_rtp_mirror.c.obj.d
   FLAGS = -DSTANDALONE -D__STDC_CONSTANT_MACROS -D__STDC_LIMIT_MACROS -DTARGET_POSIX -D_WIN32 -fPIC -DPIC -D_REENTRANT -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Wall -O3 -mtune=generic  -O3 -DNDEBUG
-  INCLUDES = -IF:/CoNSync/CoNSync-master/playfair -IF:/CoNSync/CoNSync-master/llhttp -IF:/CoNSync/CoNSync-master/lib -IF:/msys64/ucrt64/bin/../include/glib-2.0 -IF:/msys64/ucrt64/bin/../lib/glib-2.0/include
+  INCLUDES = -IF:/CNS/CoNSync/CoNSync-master/playfair -IF:/CNS/CoNSync/CoNSync-master/llhttp -IF:/CNS/CoNSync/CoNSync-master/lib -IF:/msys64/ucrt64/bin/../include/glib-2.0 -IF:/msys64/ucrt64/bin/../lib/glib-2.0/include
   OBJECT_DIR = CMakeFiles\airplay.dir
   OBJECT_FILE_DIR = CMakeFiles\airplay.dir\lib
   TARGET_COMPILE_PDB = CMakeFiles\airplay.dir\airplay.pdb
   TARGET_PDB = libairplay.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\airplay.dir
 
-build CMakeFiles/airplay.dir/lib/srp.c.obj: C_COMPILER__airplay_unscanned_Release F$:/CoNSync/CoNSync-master/lib/srp.c || cmake_object_order_depends_target_airplay
+build CMakeFiles/airplay.dir/lib/srp.c.obj: C_COMPILER__airplay_unscanned_Release F$:/CNS/CoNSync/CoNSync-master/lib/srp.c || cmake_object_order_depends_target_airplay
   CONFIG = Release
   DEFINES = -DNOHOLD -DOPENSSL_API_COMPAT=0x10101000L -DPLIST_210 -DPLIST_230
   DEP_FILE = CMakeFiles\airplay.dir\lib\srp.c.obj.d
   FLAGS = -DSTANDALONE -D__STDC_CONSTANT_MACROS -D__STDC_LIMIT_MACROS -DTARGET_POSIX -D_WIN32 -fPIC -DPIC -D_REENTRANT -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Wall -O3 -mtune=generic  -O3 -DNDEBUG
-  INCLUDES = -IF:/CoNSync/CoNSync-master/playfair -IF:/CoNSync/CoNSync-master/llhttp -IF:/CoNSync/CoNSync-master/lib -IF:/msys64/ucrt64/bin/../include/glib-2.0 -IF:/msys64/ucrt64/bin/../lib/glib-2.0/include
+  INCLUDES = -IF:/CNS/CoNSync/CoNSync-master/playfair -IF:/CNS/CoNSync/CoNSync-master/llhttp -IF:/CNS/CoNSync/CoNSync-master/lib -IF:/msys64/ucrt64/bin/../include/glib-2.0 -IF:/msys64/ucrt64/bin/../lib/glib-2.0/include
   OBJECT_DIR = CMakeFiles\airplay.dir
   OBJECT_FILE_DIR = CMakeFiles\airplay.dir\lib
   TARGET_COMPILE_PDB = CMakeFiles\airplay.dir\airplay.pdb
   TARGET_PDB = libairplay.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\airplay.dir
 
-build CMakeFiles/airplay.dir/lib/utils.c.obj: C_COMPILER__airplay_unscanned_Release F$:/CoNSync/CoNSync-master/lib/utils.c || cmake_object_order_depends_target_airplay
+build CMakeFiles/airplay.dir/lib/utils.c.obj: C_COMPILER__airplay_unscanned_Release F$:/CNS/CoNSync/CoNSync-master/lib/utils.c || cmake_object_order_depends_target_airplay
   CONFIG = Release
   DEFINES = -DNOHOLD -DOPENSSL_API_COMPAT=0x10101000L -DPLIST_210 -DPLIST_230
   DEP_FILE = CMakeFiles\airplay.dir\lib\utils.c.obj.d
   FLAGS = -DSTANDALONE -D__STDC_CONSTANT_MACROS -D__STDC_LIMIT_MACROS -DTARGET_POSIX -D_WIN32 -fPIC -DPIC -D_REENTRANT -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Wall -O3 -mtune=generic  -O3 -DNDEBUG
-  INCLUDES = -IF:/CoNSync/CoNSync-master/playfair -IF:/CoNSync/CoNSync-master/llhttp -IF:/CoNSync/CoNSync-master/lib -IF:/msys64/ucrt64/bin/../include/glib-2.0 -IF:/msys64/ucrt64/bin/../lib/glib-2.0/include
+  INCLUDES = -IF:/CNS/CoNSync/CoNSync-master/playfair -IF:/CNS/CoNSync/CoNSync-master/llhttp -IF:/CNS/CoNSync/CoNSync-master/lib -IF:/msys64/ucrt64/bin/../include/glib-2.0 -IF:/msys64/ucrt64/bin/../lib/glib-2.0/include
   OBJECT_DIR = CMakeFiles\airplay.dir
   OBJECT_FILE_DIR = CMakeFiles\airplay.dir\lib
   TARGET_COMPILE_PDB = CMakeFiles\airplay.dir\airplay.pdb
@@ -329,12 +329,12 @@ build libairplay.a: CXX_STATIC_LIBRARY_LINKER__airplay_Release CMakeFiles/airpla
 
 build cmake_object_order_depends_target_CoNSync: phony || CoNSync_res.o cmake_object_order_depends_target_airplay cmake_object_order_depends_target_dnssd cmake_object_order_depends_target_llhttp cmake_object_order_depends_target_playfair cmake_object_order_depends_target_renderers
 
-build CMakeFiles/CoNSync.dir/CoNSync.cpp.obj: CXX_COMPILER__CoNSync_unscanned_Release F$:/CoNSync/CoNSync-master/CoNSync.cpp || cmake_object_order_depends_target_CoNSync
+build CMakeFiles/CoNSync.dir/CoNSync.cpp.obj: CXX_COMPILER__CoNSync_unscanned_Release F$:/CNS/CoNSync/CoNSync-master/CoNSync.cpp || cmake_object_order_depends_target_CoNSync
   CONFIG = Release
   DEFINES = -DNOHOLD -DOPENSSL_API_COMPAT=0x10101000L -DPLIST_210 -DPLIST_230
   DEP_FILE = CMakeFiles\CoNSync.dir\CoNSync.cpp.obj.d
   FLAGS = -O3 -DNDEBUG
-  INCLUDES = -IF:/CoNSync/CoNSync-master/playfair -IF:/CoNSync/CoNSync-master/llhttp -IF:/CoNSync/CoNSync-master/lib -IF:/msys64/ucrt64/bin/../include/gstreamer-1.0 -IF:/msys64/ucrt64/bin/../include/orc-0.4 -IF:/msys64/ucrt64/bin/../include/glib-2.0 -IF:/msys64/ucrt64/bin/../lib/glib-2.0/include
+  INCLUDES = -IF:/CNS/CoNSync/CoNSync-master/playfair -IF:/CNS/CoNSync/CoNSync-master/llhttp -IF:/CNS/CoNSync/CoNSync-master/lib -IF:/msys64/ucrt64/bin/../include/gstreamer-1.0 -IF:/msys64/ucrt64/bin/../include/orc-0.4 -IF:/msys64/ucrt64/bin/../include/glib-2.0 -IF:/msys64/ucrt64/bin/../lib/glib-2.0/include
   OBJECT_DIR = CMakeFiles\CoNSync.dir
   OBJECT_FILE_DIR = CMakeFiles\CoNSync.dir
   TARGET_COMPILE_PDB = CMakeFiles\CoNSync.dir\
@@ -367,7 +367,7 @@ build CoNSync.exe: CXX_EXECUTABLE_LINKER__CoNSync_Release CoNSync_res.o CMakeFil
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D F:\CoNSync\CoNSync-master\build && F:\msys64\ucrt64\bin\cmake.exe -E echo "No interactive CMake dialog available.""
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D F:\CNS\CoNSync\CoNSync-master\build && F:\msys64\ucrt64\bin\cmake.exe -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -378,7 +378,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D F:\CoNSync\CoNSync-master\build && F:\msys64\ucrt64\bin\cmake.exe --regenerate-during-build -SF:\CoNSync\CoNSync-master -BF:\CoNSync\CoNSync-master\build"
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D F:\CNS\CoNSync\CoNSync-master\build && F:\msys64\ucrt64\bin\cmake.exe --regenerate-during-build -SF:\CNS\CoNSync\CoNSync-master -BF:\CNS\CoNSync\CoNSync-master\build"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -389,14 +389,14 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 #############################################
 # Custom command for CoNSync_res.o
 
-build CoNSync_res.o | ${cmake_ninja_workdir}CoNSync_res.o: CUSTOM_COMMAND F$:/CoNSync/CoNSync-master/CoNSync.rc F$:/CoNSync/CoNSync-master/CoNSync.ico || lib/dns_sd/libdnssd.a lib/llhttp/libllhttp.a lib/playfair/libplayfair.a libairplay.a renderers/librenderers.a
-  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D F:\CoNSync\CoNSync-master && F:\msys64\ucrt64\bin\windres.exe -i F:/CoNSync/CoNSync-master/CoNSync.rc -o F:/CoNSync/CoNSync-master/build/CoNSync_res.o"
+build CoNSync_res.o | ${cmake_ninja_workdir}CoNSync_res.o: CUSTOM_COMMAND F$:/CNS/CoNSync/CoNSync-master/CoNSync.rc F$:/CNS/CoNSync/CoNSync-master/CoNSync.ico || lib/dns_sd/libdnssd.a lib/llhttp/libllhttp.a lib/playfair/libplayfair.a libairplay.a renderers/librenderers.a
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D F:\CNS\CoNSync\CoNSync-master && F:\msys64\ucrt64\bin\windres.exe -i F:/CNS/CoNSync/CoNSync-master/CoNSync.rc -o F:/CNS/CoNSync/CoNSync-master/build/CoNSync_res.o"
   DESC = Compiling Windows resource file (icon)
   restat = 1
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# F:/CoNSync/CoNSync-master/CMakeLists.txt
+# F:/CNS/CoNSync/CoNSync-master/CMakeLists.txt
 # =============================================================================
 
 # =============================================================================
@@ -408,55 +408,55 @@ build CoNSync_res.o | ${cmake_ninja_workdir}CoNSync_res.o: CUSTOM_COMMAND F$:/Co
 
 build cmake_object_order_depends_target_playfair: phony || .
 
-build lib/playfair/CMakeFiles/playfair.dir/hand_garble.c.obj: C_COMPILER__playfair_unscanned_Release F$:/CoNSync/CoNSync-master/lib/playfair/hand_garble.c || cmake_object_order_depends_target_playfair
+build lib/playfair/CMakeFiles/playfair.dir/hand_garble.c.obj: C_COMPILER__playfair_unscanned_Release F$:/CNS/CoNSync/CoNSync-master/lib/playfair/hand_garble.c || cmake_object_order_depends_target_playfair
   CONFIG = Release
   DEP_FILE = lib\playfair\CMakeFiles\playfair.dir\hand_garble.c.obj.d
   FLAGS = -O3 -DNDEBUG
-  INCLUDES = -IF:/CoNSync/CoNSync-master/playfair -IF:/CoNSync/CoNSync-master/llhttp -IF:/CoNSync/CoNSync-master/lib -IF:/CoNSync/CoNSync-master/lib/playfair/.
+  INCLUDES = -IF:/CNS/CoNSync/CoNSync-master/playfair -IF:/CNS/CoNSync/CoNSync-master/llhttp -IF:/CNS/CoNSync/CoNSync-master/lib -IF:/CNS/CoNSync/CoNSync-master/lib/playfair/.
   OBJECT_DIR = lib\playfair\CMakeFiles\playfair.dir
   OBJECT_FILE_DIR = lib\playfair\CMakeFiles\playfair.dir
   TARGET_COMPILE_PDB = lib\playfair\CMakeFiles\playfair.dir\playfair.pdb
   TARGET_PDB = lib\playfair\libplayfair.pdb
   TARGET_SUPPORT_DIR = lib\playfair\CMakeFiles\playfair.dir
 
-build lib/playfair/CMakeFiles/playfair.dir/modified_md5.c.obj: C_COMPILER__playfair_unscanned_Release F$:/CoNSync/CoNSync-master/lib/playfair/modified_md5.c || cmake_object_order_depends_target_playfair
+build lib/playfair/CMakeFiles/playfair.dir/modified_md5.c.obj: C_COMPILER__playfair_unscanned_Release F$:/CNS/CoNSync/CoNSync-master/lib/playfair/modified_md5.c || cmake_object_order_depends_target_playfair
   CONFIG = Release
   DEP_FILE = lib\playfair\CMakeFiles\playfair.dir\modified_md5.c.obj.d
   FLAGS = -O3 -DNDEBUG
-  INCLUDES = -IF:/CoNSync/CoNSync-master/playfair -IF:/CoNSync/CoNSync-master/llhttp -IF:/CoNSync/CoNSync-master/lib -IF:/CoNSync/CoNSync-master/lib/playfair/.
+  INCLUDES = -IF:/CNS/CoNSync/CoNSync-master/playfair -IF:/CNS/CoNSync/CoNSync-master/llhttp -IF:/CNS/CoNSync/CoNSync-master/lib -IF:/CNS/CoNSync/CoNSync-master/lib/playfair/.
   OBJECT_DIR = lib\playfair\CMakeFiles\playfair.dir
   OBJECT_FILE_DIR = lib\playfair\CMakeFiles\playfair.dir
   TARGET_COMPILE_PDB = lib\playfair\CMakeFiles\playfair.dir\playfair.pdb
   TARGET_PDB = lib\playfair\libplayfair.pdb
   TARGET_SUPPORT_DIR = lib\playfair\CMakeFiles\playfair.dir
 
-build lib/playfair/CMakeFiles/playfair.dir/omg_hax.c.obj: C_COMPILER__playfair_unscanned_Release F$:/CoNSync/CoNSync-master/lib/playfair/omg_hax.c || cmake_object_order_depends_target_playfair
+build lib/playfair/CMakeFiles/playfair.dir/omg_hax.c.obj: C_COMPILER__playfair_unscanned_Release F$:/CNS/CoNSync/CoNSync-master/lib/playfair/omg_hax.c || cmake_object_order_depends_target_playfair
   CONFIG = Release
   DEP_FILE = lib\playfair\CMakeFiles\playfair.dir\omg_hax.c.obj.d
   FLAGS = -O3 -DNDEBUG
-  INCLUDES = -IF:/CoNSync/CoNSync-master/playfair -IF:/CoNSync/CoNSync-master/llhttp -IF:/CoNSync/CoNSync-master/lib -IF:/CoNSync/CoNSync-master/lib/playfair/.
+  INCLUDES = -IF:/CNS/CoNSync/CoNSync-master/playfair -IF:/CNS/CoNSync/CoNSync-master/llhttp -IF:/CNS/CoNSync/CoNSync-master/lib -IF:/CNS/CoNSync/CoNSync-master/lib/playfair/.
   OBJECT_DIR = lib\playfair\CMakeFiles\playfair.dir
   OBJECT_FILE_DIR = lib\playfair\CMakeFiles\playfair.dir
   TARGET_COMPILE_PDB = lib\playfair\CMakeFiles\playfair.dir\playfair.pdb
   TARGET_PDB = lib\playfair\libplayfair.pdb
   TARGET_SUPPORT_DIR = lib\playfair\CMakeFiles\playfair.dir
 
-build lib/playfair/CMakeFiles/playfair.dir/playfair.c.obj: C_COMPILER__playfair_unscanned_Release F$:/CoNSync/CoNSync-master/lib/playfair/playfair.c || cmake_object_order_depends_target_playfair
+build lib/playfair/CMakeFiles/playfair.dir/playfair.c.obj: C_COMPILER__playfair_unscanned_Release F$:/CNS/CoNSync/CoNSync-master/lib/playfair/playfair.c || cmake_object_order_depends_target_playfair
   CONFIG = Release
   DEP_FILE = lib\playfair\CMakeFiles\playfair.dir\playfair.c.obj.d
   FLAGS = -O3 -DNDEBUG
-  INCLUDES = -IF:/CoNSync/CoNSync-master/playfair -IF:/CoNSync/CoNSync-master/llhttp -IF:/CoNSync/CoNSync-master/lib -IF:/CoNSync/CoNSync-master/lib/playfair/.
+  INCLUDES = -IF:/CNS/CoNSync/CoNSync-master/playfair -IF:/CNS/CoNSync/CoNSync-master/llhttp -IF:/CNS/CoNSync/CoNSync-master/lib -IF:/CNS/CoNSync/CoNSync-master/lib/playfair/.
   OBJECT_DIR = lib\playfair\CMakeFiles\playfair.dir
   OBJECT_FILE_DIR = lib\playfair\CMakeFiles\playfair.dir
   TARGET_COMPILE_PDB = lib\playfair\CMakeFiles\playfair.dir\playfair.pdb
   TARGET_PDB = lib\playfair\libplayfair.pdb
   TARGET_SUPPORT_DIR = lib\playfair\CMakeFiles\playfair.dir
 
-build lib/playfair/CMakeFiles/playfair.dir/sap_hash.c.obj: C_COMPILER__playfair_unscanned_Release F$:/CoNSync/CoNSync-master/lib/playfair/sap_hash.c || cmake_object_order_depends_target_playfair
+build lib/playfair/CMakeFiles/playfair.dir/sap_hash.c.obj: C_COMPILER__playfair_unscanned_Release F$:/CNS/CoNSync/CoNSync-master/lib/playfair/sap_hash.c || cmake_object_order_depends_target_playfair
   CONFIG = Release
   DEP_FILE = lib\playfair\CMakeFiles\playfair.dir\sap_hash.c.obj.d
   FLAGS = -O3 -DNDEBUG
-  INCLUDES = -IF:/CoNSync/CoNSync-master/playfair -IF:/CoNSync/CoNSync-master/llhttp -IF:/CoNSync/CoNSync-master/lib -IF:/CoNSync/CoNSync-master/lib/playfair/.
+  INCLUDES = -IF:/CNS/CoNSync/CoNSync-master/playfair -IF:/CNS/CoNSync/CoNSync-master/llhttp -IF:/CNS/CoNSync/CoNSync-master/lib -IF:/CNS/CoNSync/CoNSync-master/lib/playfair/.
   OBJECT_DIR = lib\playfair\CMakeFiles\playfair.dir
   OBJECT_FILE_DIR = lib\playfair\CMakeFiles\playfair.dir
   TARGET_COMPILE_PDB = lib\playfair\CMakeFiles\playfair.dir\playfair.pdb
@@ -487,7 +487,7 @@ build lib/playfair/libplayfair.a: C_STATIC_LIBRARY_LINKER__playfair_Release lib/
 # Utility command for edit_cache
 
 build lib/playfair/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D F:\CoNSync\CoNSync-master\build\lib\playfair && F:\msys64\ucrt64\bin\cmake.exe -E echo "No interactive CMake dialog available.""
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D F:\CNS\CoNSync\CoNSync-master\build\lib\playfair && F:\msys64\ucrt64\bin\cmake.exe -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -498,7 +498,7 @@ build lib/playfair/edit_cache: phony lib/playfair/CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build lib/playfair/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D F:\CoNSync\CoNSync-master\build\lib\playfair && F:\msys64\ucrt64\bin\cmake.exe --regenerate-during-build -SF:\CoNSync\CoNSync-master -BF:\CoNSync\CoNSync-master\build"
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D F:\CNS\CoNSync\CoNSync-master\build\lib\playfair && F:\msys64\ucrt64\bin\cmake.exe --regenerate-during-build -SF:\CNS\CoNSync\CoNSync-master -BF:\CNS\CoNSync\CoNSync-master\build"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -507,7 +507,7 @@ build lib/playfair/rebuild_cache: phony lib/playfair/CMakeFiles/rebuild_cache.ut
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# F:/CoNSync/CoNSync-master/CMakeLists.txt
+# F:/CNS/CoNSync/CoNSync-master/CMakeLists.txt
 # =============================================================================
 
 # =============================================================================
@@ -519,33 +519,33 @@ build lib/playfair/rebuild_cache: phony lib/playfair/CMakeFiles/rebuild_cache.ut
 
 build cmake_object_order_depends_target_llhttp: phony || .
 
-build lib/llhttp/CMakeFiles/llhttp.dir/api.c.obj: C_COMPILER__llhttp_unscanned_Release F$:/CoNSync/CoNSync-master/lib/llhttp/api.c || cmake_object_order_depends_target_llhttp
+build lib/llhttp/CMakeFiles/llhttp.dir/api.c.obj: C_COMPILER__llhttp_unscanned_Release F$:/CNS/CoNSync/CoNSync-master/lib/llhttp/api.c || cmake_object_order_depends_target_llhttp
   CONFIG = Release
   DEP_FILE = lib\llhttp\CMakeFiles\llhttp.dir\api.c.obj.d
   FLAGS = -O3 -DNDEBUG
-  INCLUDES = -IF:/CoNSync/CoNSync-master/playfair -IF:/CoNSync/CoNSync-master/llhttp -IF:/CoNSync/CoNSync-master/lib -IF:/CoNSync/CoNSync-master/lib/llhttp/.
+  INCLUDES = -IF:/CNS/CoNSync/CoNSync-master/playfair -IF:/CNS/CoNSync/CoNSync-master/llhttp -IF:/CNS/CoNSync/CoNSync-master/lib -IF:/CNS/CoNSync/CoNSync-master/lib/llhttp/.
   OBJECT_DIR = lib\llhttp\CMakeFiles\llhttp.dir
   OBJECT_FILE_DIR = lib\llhttp\CMakeFiles\llhttp.dir
   TARGET_COMPILE_PDB = lib\llhttp\CMakeFiles\llhttp.dir\llhttp.pdb
   TARGET_PDB = lib\llhttp\libllhttp.pdb
   TARGET_SUPPORT_DIR = lib\llhttp\CMakeFiles\llhttp.dir
 
-build lib/llhttp/CMakeFiles/llhttp.dir/http.c.obj: C_COMPILER__llhttp_unscanned_Release F$:/CoNSync/CoNSync-master/lib/llhttp/http.c || cmake_object_order_depends_target_llhttp
+build lib/llhttp/CMakeFiles/llhttp.dir/http.c.obj: C_COMPILER__llhttp_unscanned_Release F$:/CNS/CoNSync/CoNSync-master/lib/llhttp/http.c || cmake_object_order_depends_target_llhttp
   CONFIG = Release
   DEP_FILE = lib\llhttp\CMakeFiles\llhttp.dir\http.c.obj.d
   FLAGS = -O3 -DNDEBUG
-  INCLUDES = -IF:/CoNSync/CoNSync-master/playfair -IF:/CoNSync/CoNSync-master/llhttp -IF:/CoNSync/CoNSync-master/lib -IF:/CoNSync/CoNSync-master/lib/llhttp/.
+  INCLUDES = -IF:/CNS/CoNSync/CoNSync-master/playfair -IF:/CNS/CoNSync/CoNSync-master/llhttp -IF:/CNS/CoNSync/CoNSync-master/lib -IF:/CNS/CoNSync/CoNSync-master/lib/llhttp/.
   OBJECT_DIR = lib\llhttp\CMakeFiles\llhttp.dir
   OBJECT_FILE_DIR = lib\llhttp\CMakeFiles\llhttp.dir
   TARGET_COMPILE_PDB = lib\llhttp\CMakeFiles\llhttp.dir\llhttp.pdb
   TARGET_PDB = lib\llhttp\libllhttp.pdb
   TARGET_SUPPORT_DIR = lib\llhttp\CMakeFiles\llhttp.dir
 
-build lib/llhttp/CMakeFiles/llhttp.dir/llhttp.c.obj: C_COMPILER__llhttp_unscanned_Release F$:/CoNSync/CoNSync-master/lib/llhttp/llhttp.c || cmake_object_order_depends_target_llhttp
+build lib/llhttp/CMakeFiles/llhttp.dir/llhttp.c.obj: C_COMPILER__llhttp_unscanned_Release F$:/CNS/CoNSync/CoNSync-master/lib/llhttp/llhttp.c || cmake_object_order_depends_target_llhttp
   CONFIG = Release
   DEP_FILE = lib\llhttp\CMakeFiles\llhttp.dir\llhttp.c.obj.d
   FLAGS = -O3 -DNDEBUG
-  INCLUDES = -IF:/CoNSync/CoNSync-master/playfair -IF:/CoNSync/CoNSync-master/llhttp -IF:/CoNSync/CoNSync-master/lib -IF:/CoNSync/CoNSync-master/lib/llhttp/.
+  INCLUDES = -IF:/CNS/CoNSync/CoNSync-master/playfair -IF:/CNS/CoNSync/CoNSync-master/llhttp -IF:/CNS/CoNSync/CoNSync-master/lib -IF:/CNS/CoNSync/CoNSync-master/lib/llhttp/.
   OBJECT_DIR = lib\llhttp\CMakeFiles\llhttp.dir
   OBJECT_FILE_DIR = lib\llhttp\CMakeFiles\llhttp.dir
   TARGET_COMPILE_PDB = lib\llhttp\CMakeFiles\llhttp.dir\llhttp.pdb
@@ -576,7 +576,7 @@ build lib/llhttp/libllhttp.a: C_STATIC_LIBRARY_LINKER__llhttp_Release lib/llhttp
 # Utility command for edit_cache
 
 build lib/llhttp/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D F:\CoNSync\CoNSync-master\build\lib\llhttp && F:\msys64\ucrt64\bin\cmake.exe -E echo "No interactive CMake dialog available.""
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D F:\CNS\CoNSync\CoNSync-master\build\lib\llhttp && F:\msys64\ucrt64\bin\cmake.exe -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -587,7 +587,7 @@ build lib/llhttp/edit_cache: phony lib/llhttp/CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build lib/llhttp/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D F:\CoNSync\CoNSync-master\build\lib\llhttp && F:\msys64\ucrt64\bin\cmake.exe --regenerate-during-build -SF:\CoNSync\CoNSync-master -BF:\CoNSync\CoNSync-master\build"
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D F:\CNS\CoNSync\CoNSync-master\build\lib\llhttp && F:\msys64\ucrt64\bin\cmake.exe --regenerate-during-build -SF:\CNS\CoNSync\CoNSync-master -BF:\CNS\CoNSync\CoNSync-master\build"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -596,7 +596,7 @@ build lib/llhttp/rebuild_cache: phony lib/llhttp/CMakeFiles/rebuild_cache.util
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# F:/CoNSync/CoNSync-master/CMakeLists.txt
+# F:/CNS/CoNSync/CoNSync-master/CMakeLists.txt
 # =============================================================================
 
 # =============================================================================
@@ -608,11 +608,11 @@ build lib/llhttp/rebuild_cache: phony lib/llhttp/CMakeFiles/rebuild_cache.util
 
 build cmake_object_order_depends_target_dnssd: phony || .
 
-build lib/dns_sd/CMakeFiles/dnssd.dir/dns_sd.c.obj: C_COMPILER__dnssd_unscanned_Release F$:/CoNSync/CoNSync-master/lib/dns_sd/dns_sd.c || cmake_object_order_depends_target_dnssd
+build lib/dns_sd/CMakeFiles/dnssd.dir/dns_sd.c.obj: C_COMPILER__dnssd_unscanned_Release F$:/CNS/CoNSync/CoNSync-master/lib/dns_sd/dns_sd.c || cmake_object_order_depends_target_dnssd
   CONFIG = Release
   DEP_FILE = lib\dns_sd\CMakeFiles\dnssd.dir\dns_sd.c.obj.d
   FLAGS = -O3 -DNDEBUG
-  INCLUDES = -IF:/CoNSync/CoNSync-master/playfair -IF:/CoNSync/CoNSync-master/llhttp -IF:/CoNSync/CoNSync-master/lib -IF:/CoNSync/CoNSync-master/lib/dns_sd/. -I"C:/Program Files/Bonjour SDK/Include"
+  INCLUDES = -IF:/CNS/CoNSync/CoNSync-master/playfair -IF:/CNS/CoNSync/CoNSync-master/llhttp -IF:/CNS/CoNSync/CoNSync-master/lib -IF:/CNS/CoNSync/CoNSync-master/lib/dns_sd/. -I"C:/Program Files/Bonjour SDK/Include"
   OBJECT_DIR = lib\dns_sd\CMakeFiles\dnssd.dir
   OBJECT_FILE_DIR = lib\dns_sd\CMakeFiles\dnssd.dir
   TARGET_COMPILE_PDB = lib\dns_sd\CMakeFiles\dnssd.dir\dnssd.pdb
@@ -643,7 +643,7 @@ build lib/dns_sd/libdnssd.a: C_STATIC_LIBRARY_LINKER__dnssd_Release lib/dns_sd/C
 # Utility command for edit_cache
 
 build lib/dns_sd/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D F:\CoNSync\CoNSync-master\build\lib\dns_sd && F:\msys64\ucrt64\bin\cmake.exe -E echo "No interactive CMake dialog available.""
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D F:\CNS\CoNSync\CoNSync-master\build\lib\dns_sd && F:\msys64\ucrt64\bin\cmake.exe -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -654,7 +654,7 @@ build lib/dns_sd/edit_cache: phony lib/dns_sd/CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build lib/dns_sd/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D F:\CoNSync\CoNSync-master\build\lib\dns_sd && F:\msys64\ucrt64\bin\cmake.exe --regenerate-during-build -SF:\CoNSync\CoNSync-master -BF:\CoNSync\CoNSync-master\build"
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D F:\CNS\CoNSync\CoNSync-master\build\lib\dns_sd && F:\msys64\ucrt64\bin\cmake.exe --regenerate-during-build -SF:\CNS\CoNSync\CoNSync-master -BF:\CNS\CoNSync\CoNSync-master\build"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -663,7 +663,7 @@ build lib/dns_sd/rebuild_cache: phony lib/dns_sd/CMakeFiles/rebuild_cache.util
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# F:/CoNSync/CoNSync-master/CMakeLists.txt
+# F:/CNS/CoNSync/CoNSync-master/CMakeLists.txt
 # =============================================================================
 
 # =============================================================================
@@ -675,48 +675,48 @@ build lib/dns_sd/rebuild_cache: phony lib/dns_sd/CMakeFiles/rebuild_cache.util
 
 build cmake_object_order_depends_target_renderers: phony || cmake_object_order_depends_target_airplay cmake_object_order_depends_target_dnssd cmake_object_order_depends_target_llhttp cmake_object_order_depends_target_playfair
 
-build renderers/CMakeFiles/renderers.dir/audio_renderer.c.obj: C_COMPILER__renderers_unscanned_Release F$:/CoNSync/CoNSync-master/renderers/audio_renderer.c || cmake_object_order_depends_target_renderers
+build renderers/CMakeFiles/renderers.dir/audio_renderer.c.obj: C_COMPILER__renderers_unscanned_Release F$:/CNS/CoNSync/CoNSync-master/renderers/audio_renderer.c || cmake_object_order_depends_target_renderers
   CONFIG = Release
   DEFINES = -DNOHOLD -DOPENSSL_API_COMPAT=0x10101000L -DPLIST_210 -DPLIST_230
   DEP_FILE = renderers\CMakeFiles\renderers.dir\audio_renderer.c.obj.d
   FLAGS = -DSTANDALONE -D__STDC_CONSTANT_MACROS -D__STDC_LIMIT_MACROS -DTARGET_POSIX -D_WIN32 -fPIC -DPIC -D_REENTRANT -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Wall -O3 -mtune=generic  -O3 -DNDEBUG
-  INCLUDES = -IF:/CoNSync/CoNSync-master/playfair -IF:/CoNSync/CoNSync-master/llhttp -IF:/CoNSync/CoNSync-master/lib -IF:/msys64/ucrt64/bin/../include/gstreamer-1.0 -IF:/msys64/ucrt64/bin/../include/orc-0.4 -IF:/msys64/ucrt64/bin/../include/glib-2.0 -IF:/msys64/ucrt64/bin/../lib/glib-2.0/include
+  INCLUDES = -IF:/CNS/CoNSync/CoNSync-master/playfair -IF:/CNS/CoNSync/CoNSync-master/llhttp -IF:/CNS/CoNSync/CoNSync-master/lib -IF:/msys64/ucrt64/bin/../include/gstreamer-1.0 -IF:/msys64/ucrt64/bin/../include/orc-0.4 -IF:/msys64/ucrt64/bin/../include/glib-2.0 -IF:/msys64/ucrt64/bin/../lib/glib-2.0/include
   OBJECT_DIR = renderers\CMakeFiles\renderers.dir
   OBJECT_FILE_DIR = renderers\CMakeFiles\renderers.dir
   TARGET_COMPILE_PDB = renderers\CMakeFiles\renderers.dir\renderers.pdb
   TARGET_PDB = renderers\librenderers.pdb
   TARGET_SUPPORT_DIR = renderers\CMakeFiles\renderers.dir
 
-build renderers/CMakeFiles/renderers.dir/video_renderer.c.obj: C_COMPILER__renderers_unscanned_Release F$:/CoNSync/CoNSync-master/renderers/video_renderer.c || cmake_object_order_depends_target_renderers
+build renderers/CMakeFiles/renderers.dir/video_renderer.c.obj: C_COMPILER__renderers_unscanned_Release F$:/CNS/CoNSync/CoNSync-master/renderers/video_renderer.c || cmake_object_order_depends_target_renderers
   CONFIG = Release
   DEFINES = -DNOHOLD -DOPENSSL_API_COMPAT=0x10101000L -DPLIST_210 -DPLIST_230
   DEP_FILE = renderers\CMakeFiles\renderers.dir\video_renderer.c.obj.d
   FLAGS = -DSTANDALONE -D__STDC_CONSTANT_MACROS -D__STDC_LIMIT_MACROS -DTARGET_POSIX -D_WIN32 -fPIC -DPIC -D_REENTRANT -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Wall -O3 -mtune=generic  -O3 -DNDEBUG
-  INCLUDES = -IF:/CoNSync/CoNSync-master/playfair -IF:/CoNSync/CoNSync-master/llhttp -IF:/CoNSync/CoNSync-master/lib -IF:/msys64/ucrt64/bin/../include/gstreamer-1.0 -IF:/msys64/ucrt64/bin/../include/orc-0.4 -IF:/msys64/ucrt64/bin/../include/glib-2.0 -IF:/msys64/ucrt64/bin/../lib/glib-2.0/include
+  INCLUDES = -IF:/CNS/CoNSync/CoNSync-master/playfair -IF:/CNS/CoNSync/CoNSync-master/llhttp -IF:/CNS/CoNSync/CoNSync-master/lib -IF:/msys64/ucrt64/bin/../include/gstreamer-1.0 -IF:/msys64/ucrt64/bin/../include/orc-0.4 -IF:/msys64/ucrt64/bin/../include/glib-2.0 -IF:/msys64/ucrt64/bin/../lib/glib-2.0/include
   OBJECT_DIR = renderers\CMakeFiles\renderers.dir
   OBJECT_FILE_DIR = renderers\CMakeFiles\renderers.dir
   TARGET_COMPILE_PDB = renderers\CMakeFiles\renderers.dir\renderers.pdb
   TARGET_PDB = renderers\librenderers.pdb
   TARGET_SUPPORT_DIR = renderers\CMakeFiles\renderers.dir
 
-build renderers/CMakeFiles/renderers.dir/mux_renderer.c.obj: C_COMPILER__renderers_unscanned_Release F$:/CoNSync/CoNSync-master/renderers/mux_renderer.c || cmake_object_order_depends_target_renderers
+build renderers/CMakeFiles/renderers.dir/mux_renderer.c.obj: C_COMPILER__renderers_unscanned_Release F$:/CNS/CoNSync/CoNSync-master/renderers/mux_renderer.c || cmake_object_order_depends_target_renderers
   CONFIG = Release
   DEFINES = -DNOHOLD -DOPENSSL_API_COMPAT=0x10101000L -DPLIST_210 -DPLIST_230
   DEP_FILE = renderers\CMakeFiles\renderers.dir\mux_renderer.c.obj.d
   FLAGS = -DSTANDALONE -D__STDC_CONSTANT_MACROS -D__STDC_LIMIT_MACROS -DTARGET_POSIX -D_WIN32 -fPIC -DPIC -D_REENTRANT -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Wall -O3 -mtune=generic  -O3 -DNDEBUG
-  INCLUDES = -IF:/CoNSync/CoNSync-master/playfair -IF:/CoNSync/CoNSync-master/llhttp -IF:/CoNSync/CoNSync-master/lib -IF:/msys64/ucrt64/bin/../include/gstreamer-1.0 -IF:/msys64/ucrt64/bin/../include/orc-0.4 -IF:/msys64/ucrt64/bin/../include/glib-2.0 -IF:/msys64/ucrt64/bin/../lib/glib-2.0/include
+  INCLUDES = -IF:/CNS/CoNSync/CoNSync-master/playfair -IF:/CNS/CoNSync/CoNSync-master/llhttp -IF:/CNS/CoNSync/CoNSync-master/lib -IF:/msys64/ucrt64/bin/../include/gstreamer-1.0 -IF:/msys64/ucrt64/bin/../include/orc-0.4 -IF:/msys64/ucrt64/bin/../include/glib-2.0 -IF:/msys64/ucrt64/bin/../lib/glib-2.0/include
   OBJECT_DIR = renderers\CMakeFiles\renderers.dir
   OBJECT_FILE_DIR = renderers\CMakeFiles\renderers.dir
   TARGET_COMPILE_PDB = renderers\CMakeFiles\renderers.dir\renderers.pdb
   TARGET_PDB = renderers\librenderers.pdb
   TARGET_SUPPORT_DIR = renderers\CMakeFiles\renderers.dir
 
-build renderers/CMakeFiles/renderers.dir/win32_window.c.obj: C_COMPILER__renderers_unscanned_Release F$:/CoNSync/CoNSync-master/renderers/win32_window.c || cmake_object_order_depends_target_renderers
+build renderers/CMakeFiles/renderers.dir/win32_window.c.obj: C_COMPILER__renderers_unscanned_Release F$:/CNS/CoNSync/CoNSync-master/renderers/win32_window.c || cmake_object_order_depends_target_renderers
   CONFIG = Release
   DEFINES = -DNOHOLD -DOPENSSL_API_COMPAT=0x10101000L -DPLIST_210 -DPLIST_230
   DEP_FILE = renderers\CMakeFiles\renderers.dir\win32_window.c.obj.d
   FLAGS = -DSTANDALONE -D__STDC_CONSTANT_MACROS -D__STDC_LIMIT_MACROS -DTARGET_POSIX -D_WIN32 -fPIC -DPIC -D_REENTRANT -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Wall -O3 -mtune=generic  -O3 -DNDEBUG
-  INCLUDES = -IF:/CoNSync/CoNSync-master/playfair -IF:/CoNSync/CoNSync-master/llhttp -IF:/CoNSync/CoNSync-master/lib -IF:/msys64/ucrt64/bin/../include/gstreamer-1.0 -IF:/msys64/ucrt64/bin/../include/orc-0.4 -IF:/msys64/ucrt64/bin/../include/glib-2.0 -IF:/msys64/ucrt64/bin/../lib/glib-2.0/include
+  INCLUDES = -IF:/CNS/CoNSync/CoNSync-master/playfair -IF:/CNS/CoNSync/CoNSync-master/llhttp -IF:/CNS/CoNSync/CoNSync-master/lib -IF:/msys64/ucrt64/bin/../include/gstreamer-1.0 -IF:/msys64/ucrt64/bin/../include/orc-0.4 -IF:/msys64/ucrt64/bin/../include/glib-2.0 -IF:/msys64/ucrt64/bin/../lib/glib-2.0/include
   OBJECT_DIR = renderers\CMakeFiles\renderers.dir
   OBJECT_FILE_DIR = renderers\CMakeFiles\renderers.dir
   TARGET_COMPILE_PDB = renderers\CMakeFiles\renderers.dir\renderers.pdb
@@ -747,7 +747,7 @@ build renderers/librenderers.a: CXX_STATIC_LIBRARY_LINKER__renderers_Release ren
 # Utility command for edit_cache
 
 build renderers/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D F:\CoNSync\CoNSync-master\build\renderers && F:\msys64\ucrt64\bin\cmake.exe -E echo "No interactive CMake dialog available.""
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D F:\CNS\CoNSync\CoNSync-master\build\renderers && F:\msys64\ucrt64\bin\cmake.exe -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -758,7 +758,7 @@ build renderers/edit_cache: phony renderers/CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build renderers/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D F:\CoNSync\CoNSync-master\build\renderers && F:\msys64\ucrt64\bin\cmake.exe --regenerate-during-build -SF:\CoNSync\CoNSync-master -BF:\CoNSync\CoNSync-master\build"
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D F:\CNS\CoNSync\CoNSync-master\build\renderers && F:\msys64\ucrt64\bin\cmake.exe --regenerate-during-build -SF:\CNS\CoNSync\CoNSync-master -BF:\CNS\CoNSync\CoNSync-master\build"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -794,35 +794,35 @@ build renderers: phony renderers/librenderers.a
 # =============================================================================
 
 #############################################
-# Folder: F:/CoNSync/CoNSync-master/build
+# Folder: F:/CNS/CoNSync/CoNSync-master/build
 
 build all: phony libairplay.a CoNSync.exe lib/playfair/all lib/llhttp/all lib/dns_sd/all renderers/all
 
 # =============================================================================
 
 #############################################
-# Folder: F:/CoNSync/CoNSync-master/build/lib/dns_sd
+# Folder: F:/CNS/CoNSync/CoNSync-master/build/lib/dns_sd
 
 build lib/dns_sd/all: phony lib/dns_sd/libdnssd.a
 
 # =============================================================================
 
 #############################################
-# Folder: F:/CoNSync/CoNSync-master/build/lib/llhttp
+# Folder: F:/CNS/CoNSync/CoNSync-master/build/lib/llhttp
 
 build lib/llhttp/all: phony lib/llhttp/libllhttp.a
 
 # =============================================================================
 
 #############################################
-# Folder: F:/CoNSync/CoNSync-master/build/lib/playfair
+# Folder: F:/CNS/CoNSync/CoNSync-master/build/lib/playfair
 
 build lib/playfair/all: phony lib/playfair/libplayfair.a
 
 # =============================================================================
 
 #############################################
-# Folder: F:/CoNSync/CoNSync-master/build/renderers
+# Folder: F:/CNS/CoNSync/CoNSync-master/build/renderers
 
 build renderers/all: phony renderers/librenderers.a
 
@@ -833,14 +833,14 @@ build renderers/all: phony renderers/librenderers.a
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja F$:/CoNSync/CoNSync-master/build/cmake_install.cmake F$:/CoNSync/CoNSync-master/build/lib/playfair/cmake_install.cmake F$:/CoNSync/CoNSync-master/build/lib/llhttp/cmake_install.cmake F$:/CoNSync/CoNSync-master/build/lib/dns_sd/cmake_install.cmake F$:/CoNSync/CoNSync-master/build/renderers/cmake_install.cmake: RERUN_CMAKE | CMakeCache.txt CMakeFiles/4.3.4/CMakeCCompiler.cmake CMakeFiles/4.3.4/CMakeCXXCompiler.cmake CMakeFiles/4.3.4/CMakeRCCompiler.cmake CMakeFiles/4.3.4/CMakeSystem.cmake F$:/CoNSync/CoNSync-master/CMakeLists.txt F$:/CoNSync/CoNSync-master/lib/dns_sd/CMakeLists.txt F$:/CoNSync/CoNSync-master/lib/llhttp/CMakeLists.txt F$:/CoNSync/CoNSync-master/lib/playfair/CMakeLists.txt F$:/CoNSync/CoNSync-master/renderers/CMakeLists.txt F$:/msys64/ucrt64/share/cmake/Modules/CMakeCCompiler.cmake.in F$:/msys64/ucrt64/share/cmake/Modules/CMakeCCompilerABI.c F$:/msys64/ucrt64/share/cmake/Modules/CMakeCInformation.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeCXXCompiler.cmake.in F$:/msys64/ucrt64/share/cmake/Modules/CMakeCXXCompilerABI.cpp F$:/msys64/ucrt64/share/cmake/Modules/CMakeCXXInformation.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeCommonLanguageInclude.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeCompilerIdDetection.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeDetermineCCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeDetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeDetermineCompilerABI.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeDetermineCompilerId.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeDetermineCompilerSupport.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeDetermineRCCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeDetermineSystem.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeFindBinUtils.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeGenericSystem.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeInitializeConfigs.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeLanguageInformation.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeNinjaFindMake.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeParseImplicitIncludeInfo.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeParseImplicitLinkInfo.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeParseLibraryArchitecture.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeRCCompiler.cmake.in F$:/msys64/ucrt64/share/cmake/Modules/CMakeRCInformation.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeSystem.cmake.in F$:/msys64/ucrt64/share/cmake/Modules/CMakeSystemSpecificInformation.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeTestCCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeTestCXXCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeTestCompilerCommon.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeTestRCCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/CheckIncludeFiles.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/ADSP-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/ARMCC-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/ARMClang-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/AppleClang-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/Borland-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/Bruce-C-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/Clang-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/Clang-DetermineCompilerInternal.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/Compaq-C-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/Cray-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/CrayClang-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/Diab-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/Embarcadero-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/Fujitsu-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/GHS-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/GNU-C-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/GNU-C.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/GNU-CXX-CXXImportStd.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/GNU-CXX.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/GNU-FindBinUtils.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/GNU.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/HP-C-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/HP-CXX-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/IAR-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/Intel-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/LCC-C-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/MSVC-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/NVHPC-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/NVIDIA-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/OrangeC-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/PGI-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/PathScale-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/Renesas-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/SCO-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/SDCC-C-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/SunPro-C-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/TI-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/TIClang-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/Tasking-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/Watcom-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/XL-C-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/XL-CXX-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/XLClang-C-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/zOS-C-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/FindOpenSSL.cmake F$:/msys64/ucrt64/share/cmake/Modules/FindPackageHandleStandardArgs.cmake F$:/msys64/ucrt64/share/cmake/Modules/FindPackageMessage.cmake F$:/msys64/ucrt64/share/cmake/Modules/FindPkgConfig.cmake F$:/msys64/ucrt64/share/cmake/Modules/Internal/CMakeCLinkerInformation.cmake F$:/msys64/ucrt64/share/cmake/Modules/Internal/CMakeCXXLinkerInformation.cmake F$:/msys64/ucrt64/share/cmake/Modules/Internal/CMakeCommonLinkerInformation.cmake F$:/msys64/ucrt64/share/cmake/Modules/Internal/CMakeDetermineLinkerId.cmake F$:/msys64/ucrt64/share/cmake/Modules/Internal/CMakeInspectCLinker.cmake F$:/msys64/ucrt64/share/cmake/Modules/Internal/CMakeInspectCXXLinker.cmake F$:/msys64/ucrt64/share/cmake/Modules/Internal/FeatureTesting.cmake F$:/msys64/ucrt64/share/cmake/Modules/Linker/GNU-C.cmake F$:/msys64/ucrt64/share/cmake/Modules/Linker/GNU-CXX.cmake F$:/msys64/ucrt64/share/cmake/Modules/Linker/GNU.cmake F$:/msys64/ucrt64/share/cmake/Modules/Platform/Linker/GNU.cmake F$:/msys64/ucrt64/share/cmake/Modules/Platform/Linker/Windows-GNU-C.cmake F$:/msys64/ucrt64/share/cmake/Modules/Platform/Linker/Windows-GNU-CXX.cmake F$:/msys64/ucrt64/share/cmake/Modules/Platform/Linker/Windows-GNU.cmake F$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows-Determine-CXX.cmake F$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows-GNU-C-ABI.cmake F$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows-GNU-C.cmake F$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows-GNU-CXX-ABI.cmake F$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows-GNU-CXX.cmake F$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows-GNU.cmake F$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows-Initialize.cmake F$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows-windres.cmake F$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows.cmake F$:/msys64/ucrt64/share/cmake/Modules/Platform/WindowsPaths.cmake
+build build.ninja F$:/CNS/CoNSync/CoNSync-master/build/cmake_install.cmake F$:/CNS/CoNSync/CoNSync-master/build/lib/playfair/cmake_install.cmake F$:/CNS/CoNSync/CoNSync-master/build/lib/llhttp/cmake_install.cmake F$:/CNS/CoNSync/CoNSync-master/build/lib/dns_sd/cmake_install.cmake F$:/CNS/CoNSync/CoNSync-master/build/renderers/cmake_install.cmake: RERUN_CMAKE | CMakeCache.txt CMakeFiles/4.3.4/CMakeCCompiler.cmake CMakeFiles/4.3.4/CMakeCXXCompiler.cmake CMakeFiles/4.3.4/CMakeRCCompiler.cmake CMakeFiles/4.3.4/CMakeSystem.cmake F$:/CNS/CoNSync/CoNSync-master/CMakeLists.txt F$:/CNS/CoNSync/CoNSync-master/lib/dns_sd/CMakeLists.txt F$:/CNS/CoNSync/CoNSync-master/lib/llhttp/CMakeLists.txt F$:/CNS/CoNSync/CoNSync-master/lib/playfair/CMakeLists.txt F$:/CNS/CoNSync/CoNSync-master/renderers/CMakeLists.txt F$:/msys64/ucrt64/share/cmake/Modules/CMakeCCompiler.cmake.in F$:/msys64/ucrt64/share/cmake/Modules/CMakeCCompilerABI.c F$:/msys64/ucrt64/share/cmake/Modules/CMakeCInformation.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeCXXCompiler.cmake.in F$:/msys64/ucrt64/share/cmake/Modules/CMakeCXXCompilerABI.cpp F$:/msys64/ucrt64/share/cmake/Modules/CMakeCXXInformation.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeCommonLanguageInclude.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeCompilerIdDetection.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeDetermineCCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeDetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeDetermineCompilerABI.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeDetermineCompilerId.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeDetermineCompilerSupport.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeDetermineRCCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeDetermineSystem.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeFindBinUtils.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeGenericSystem.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeInitializeConfigs.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeLanguageInformation.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeNinjaFindMake.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeParseImplicitIncludeInfo.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeParseImplicitLinkInfo.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeParseLibraryArchitecture.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeRCCompiler.cmake.in F$:/msys64/ucrt64/share/cmake/Modules/CMakeRCInformation.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeSystem.cmake.in F$:/msys64/ucrt64/share/cmake/Modules/CMakeSystemSpecificInformation.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeTestCCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeTestCXXCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeTestCompilerCommon.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeTestRCCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/CheckIncludeFiles.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/ADSP-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/ARMCC-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/ARMClang-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/AppleClang-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/Borland-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/Bruce-C-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/Clang-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/Clang-DetermineCompilerInternal.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/Compaq-C-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/Cray-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/CrayClang-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/Diab-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/Embarcadero-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/Fujitsu-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/GHS-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/GNU-C-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/GNU-C.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/GNU-CXX-CXXImportStd.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/GNU-CXX.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/GNU-FindBinUtils.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/GNU.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/HP-C-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/HP-CXX-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/IAR-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/Intel-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/LCC-C-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/MSVC-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/NVHPC-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/NVIDIA-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/OrangeC-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/PGI-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/PathScale-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/Renesas-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/SCO-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/SDCC-C-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/SunPro-C-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/TI-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/TIClang-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/Tasking-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/Watcom-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/XL-C-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/XL-CXX-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/XLClang-C-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/zOS-C-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/FindOpenSSL.cmake F$:/msys64/ucrt64/share/cmake/Modules/FindPackageHandleStandardArgs.cmake F$:/msys64/ucrt64/share/cmake/Modules/FindPackageMessage.cmake F$:/msys64/ucrt64/share/cmake/Modules/FindPkgConfig.cmake F$:/msys64/ucrt64/share/cmake/Modules/Internal/CMakeCLinkerInformation.cmake F$:/msys64/ucrt64/share/cmake/Modules/Internal/CMakeCXXLinkerInformation.cmake F$:/msys64/ucrt64/share/cmake/Modules/Internal/CMakeCommonLinkerInformation.cmake F$:/msys64/ucrt64/share/cmake/Modules/Internal/CMakeDetermineLinkerId.cmake F$:/msys64/ucrt64/share/cmake/Modules/Internal/CMakeInspectCLinker.cmake F$:/msys64/ucrt64/share/cmake/Modules/Internal/CMakeInspectCXXLinker.cmake F$:/msys64/ucrt64/share/cmake/Modules/Internal/FeatureTesting.cmake F$:/msys64/ucrt64/share/cmake/Modules/Linker/GNU-C.cmake F$:/msys64/ucrt64/share/cmake/Modules/Linker/GNU-CXX.cmake F$:/msys64/ucrt64/share/cmake/Modules/Linker/GNU.cmake F$:/msys64/ucrt64/share/cmake/Modules/Platform/Linker/GNU.cmake F$:/msys64/ucrt64/share/cmake/Modules/Platform/Linker/Windows-GNU-C.cmake F$:/msys64/ucrt64/share/cmake/Modules/Platform/Linker/Windows-GNU-CXX.cmake F$:/msys64/ucrt64/share/cmake/Modules/Platform/Linker/Windows-GNU.cmake F$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows-Determine-CXX.cmake F$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows-GNU-C-ABI.cmake F$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows-GNU-C.cmake F$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows-GNU-CXX-ABI.cmake F$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows-GNU-CXX.cmake F$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows-GNU.cmake F$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows-Initialize.cmake F$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows-windres.cmake F$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows.cmake F$:/msys64/ucrt64/share/cmake/Modules/Platform/WindowsPaths.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build CMakeCache.txt CMakeFiles/4.3.4/CMakeCCompiler.cmake CMakeFiles/4.3.4/CMakeCXXCompiler.cmake CMakeFiles/4.3.4/CMakeRCCompiler.cmake CMakeFiles/4.3.4/CMakeSystem.cmake F$:/CoNSync/CoNSync-master/CMakeLists.txt F$:/CoNSync/CoNSync-master/lib/dns_sd/CMakeLists.txt F$:/CoNSync/CoNSync-master/lib/llhttp/CMakeLists.txt F$:/CoNSync/CoNSync-master/lib/playfair/CMakeLists.txt F$:/CoNSync/CoNSync-master/renderers/CMakeLists.txt F$:/msys64/ucrt64/share/cmake/Modules/CMakeCCompiler.cmake.in F$:/msys64/ucrt64/share/cmake/Modules/CMakeCCompilerABI.c F$:/msys64/ucrt64/share/cmake/Modules/CMakeCInformation.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeCXXCompiler.cmake.in F$:/msys64/ucrt64/share/cmake/Modules/CMakeCXXCompilerABI.cpp F$:/msys64/ucrt64/share/cmake/Modules/CMakeCXXInformation.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeCommonLanguageInclude.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeCompilerIdDetection.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeDetermineCCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeDetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeDetermineCompilerABI.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeDetermineCompilerId.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeDetermineCompilerSupport.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeDetermineRCCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeDetermineSystem.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeFindBinUtils.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeGenericSystem.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeInitializeConfigs.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeLanguageInformation.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeNinjaFindMake.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeParseImplicitIncludeInfo.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeParseImplicitLinkInfo.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeParseLibraryArchitecture.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeRCCompiler.cmake.in F$:/msys64/ucrt64/share/cmake/Modules/CMakeRCInformation.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeSystem.cmake.in F$:/msys64/ucrt64/share/cmake/Modules/CMakeSystemSpecificInformation.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeTestCCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeTestCXXCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeTestCompilerCommon.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeTestRCCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/CheckIncludeFiles.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/ADSP-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/ARMCC-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/ARMClang-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/AppleClang-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/Borland-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/Bruce-C-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/Clang-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/Clang-DetermineCompilerInternal.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/Compaq-C-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/Cray-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/CrayClang-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/Diab-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/Embarcadero-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/Fujitsu-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/GHS-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/GNU-C-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/GNU-C.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/GNU-CXX-CXXImportStd.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/GNU-CXX.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/GNU-FindBinUtils.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/GNU.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/HP-C-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/HP-CXX-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/IAR-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/Intel-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/LCC-C-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/MSVC-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/NVHPC-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/NVIDIA-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/OrangeC-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/PGI-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/PathScale-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/Renesas-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/SCO-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/SDCC-C-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/SunPro-C-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/TI-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/TIClang-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/Tasking-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/Watcom-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/XL-C-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/XL-CXX-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/XLClang-C-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/zOS-C-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/FindOpenSSL.cmake F$:/msys64/ucrt64/share/cmake/Modules/FindPackageHandleStandardArgs.cmake F$:/msys64/ucrt64/share/cmake/Modules/FindPackageMessage.cmake F$:/msys64/ucrt64/share/cmake/Modules/FindPkgConfig.cmake F$:/msys64/ucrt64/share/cmake/Modules/Internal/CMakeCLinkerInformation.cmake F$:/msys64/ucrt64/share/cmake/Modules/Internal/CMakeCXXLinkerInformation.cmake F$:/msys64/ucrt64/share/cmake/Modules/Internal/CMakeCommonLinkerInformation.cmake F$:/msys64/ucrt64/share/cmake/Modules/Internal/CMakeDetermineLinkerId.cmake F$:/msys64/ucrt64/share/cmake/Modules/Internal/CMakeInspectCLinker.cmake F$:/msys64/ucrt64/share/cmake/Modules/Internal/CMakeInspectCXXLinker.cmake F$:/msys64/ucrt64/share/cmake/Modules/Internal/FeatureTesting.cmake F$:/msys64/ucrt64/share/cmake/Modules/Linker/GNU-C.cmake F$:/msys64/ucrt64/share/cmake/Modules/Linker/GNU-CXX.cmake F$:/msys64/ucrt64/share/cmake/Modules/Linker/GNU.cmake F$:/msys64/ucrt64/share/cmake/Modules/Platform/Linker/GNU.cmake F$:/msys64/ucrt64/share/cmake/Modules/Platform/Linker/Windows-GNU-C.cmake F$:/msys64/ucrt64/share/cmake/Modules/Platform/Linker/Windows-GNU-CXX.cmake F$:/msys64/ucrt64/share/cmake/Modules/Platform/Linker/Windows-GNU.cmake F$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows-Determine-CXX.cmake F$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows-GNU-C-ABI.cmake F$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows-GNU-C.cmake F$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows-GNU-CXX-ABI.cmake F$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows-GNU-CXX.cmake F$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows-GNU.cmake F$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows-Initialize.cmake F$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows-windres.cmake F$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows.cmake F$:/msys64/ucrt64/share/cmake/Modules/Platform/WindowsPaths.cmake: phony
+build CMakeCache.txt CMakeFiles/4.3.4/CMakeCCompiler.cmake CMakeFiles/4.3.4/CMakeCXXCompiler.cmake CMakeFiles/4.3.4/CMakeRCCompiler.cmake CMakeFiles/4.3.4/CMakeSystem.cmake F$:/CNS/CoNSync/CoNSync-master/CMakeLists.txt F$:/CNS/CoNSync/CoNSync-master/lib/dns_sd/CMakeLists.txt F$:/CNS/CoNSync/CoNSync-master/lib/llhttp/CMakeLists.txt F$:/CNS/CoNSync/CoNSync-master/lib/playfair/CMakeLists.txt F$:/CNS/CoNSync/CoNSync-master/renderers/CMakeLists.txt F$:/msys64/ucrt64/share/cmake/Modules/CMakeCCompiler.cmake.in F$:/msys64/ucrt64/share/cmake/Modules/CMakeCCompilerABI.c F$:/msys64/ucrt64/share/cmake/Modules/CMakeCInformation.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeCXXCompiler.cmake.in F$:/msys64/ucrt64/share/cmake/Modules/CMakeCXXCompilerABI.cpp F$:/msys64/ucrt64/share/cmake/Modules/CMakeCXXInformation.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeCommonLanguageInclude.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeCompilerIdDetection.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeDetermineCCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeDetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeDetermineCompilerABI.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeDetermineCompilerId.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeDetermineCompilerSupport.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeDetermineRCCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeDetermineSystem.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeFindBinUtils.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeGenericSystem.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeInitializeConfigs.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeLanguageInformation.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeNinjaFindMake.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeParseImplicitIncludeInfo.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeParseImplicitLinkInfo.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeParseLibraryArchitecture.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeRCCompiler.cmake.in F$:/msys64/ucrt64/share/cmake/Modules/CMakeRCInformation.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeSystem.cmake.in F$:/msys64/ucrt64/share/cmake/Modules/CMakeSystemSpecificInformation.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeTestCCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeTestCXXCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeTestCompilerCommon.cmake F$:/msys64/ucrt64/share/cmake/Modules/CMakeTestRCCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/CheckIncludeFiles.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/ADSP-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/ARMCC-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/ARMClang-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/AppleClang-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/Borland-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/Bruce-C-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/Clang-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/Clang-DetermineCompilerInternal.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/Compaq-C-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/Cray-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/CrayClang-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/Diab-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/Embarcadero-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/Fujitsu-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/GHS-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/GNU-C-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/GNU-C.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/GNU-CXX-CXXImportStd.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/GNU-CXX.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/GNU-FindBinUtils.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/GNU.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/HP-C-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/HP-CXX-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/IAR-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/Intel-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/LCC-C-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/MSVC-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/NVHPC-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/NVIDIA-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/OrangeC-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/PGI-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/PathScale-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/Renesas-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/SCO-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/SDCC-C-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/SunPro-C-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/TI-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/TIClang-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/Tasking-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/Watcom-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/XL-C-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/XL-CXX-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/XLClang-C-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/zOS-C-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake F$:/msys64/ucrt64/share/cmake/Modules/FindOpenSSL.cmake F$:/msys64/ucrt64/share/cmake/Modules/FindPackageHandleStandardArgs.cmake F$:/msys64/ucrt64/share/cmake/Modules/FindPackageMessage.cmake F$:/msys64/ucrt64/share/cmake/Modules/FindPkgConfig.cmake F$:/msys64/ucrt64/share/cmake/Modules/Internal/CMakeCLinkerInformation.cmake F$:/msys64/ucrt64/share/cmake/Modules/Internal/CMakeCXXLinkerInformation.cmake F$:/msys64/ucrt64/share/cmake/Modules/Internal/CMakeCommonLinkerInformation.cmake F$:/msys64/ucrt64/share/cmake/Modules/Internal/CMakeDetermineLinkerId.cmake F$:/msys64/ucrt64/share/cmake/Modules/Internal/CMakeInspectCLinker.cmake F$:/msys64/ucrt64/share/cmake/Modules/Internal/CMakeInspectCXXLinker.cmake F$:/msys64/ucrt64/share/cmake/Modules/Internal/FeatureTesting.cmake F$:/msys64/ucrt64/share/cmake/Modules/Linker/GNU-C.cmake F$:/msys64/ucrt64/share/cmake/Modules/Linker/GNU-CXX.cmake F$:/msys64/ucrt64/share/cmake/Modules/Linker/GNU.cmake F$:/msys64/ucrt64/share/cmake/Modules/Platform/Linker/GNU.cmake F$:/msys64/ucrt64/share/cmake/Modules/Platform/Linker/Windows-GNU-C.cmake F$:/msys64/ucrt64/share/cmake/Modules/Platform/Linker/Windows-GNU-CXX.cmake F$:/msys64/ucrt64/share/cmake/Modules/Platform/Linker/Windows-GNU.cmake F$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows-Determine-CXX.cmake F$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows-GNU-C-ABI.cmake F$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows-GNU-C.cmake F$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows-GNU-CXX-ABI.cmake F$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows-GNU-CXX.cmake F$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows-GNU.cmake F$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows-Initialize.cmake F$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows-windres.cmake F$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows.cmake F$:/msys64/ucrt64/share/cmake/Modules/Platform/WindowsPaths.cmake: phony
 
 
 #############################################

@@ -229,8 +229,8 @@ static LRESULT CALLBACK wnd_proc(HWND hwnd, UINT msg, WPARAM wp, LPARAM lp) {
         }
         if (pt.x < e) return HTLEFT;
         if (pt.x >= rc.right - e) return HTRIGHT;
-        if (GetAsyncKeyState(VK_SHIFT) < 0) return HTCAPTION;
-        return HTCLIENT;
+        return HTCAPTION;
+        //return HTCLIENT;  // unreachable after HTCAPTION
     }
 
     case WM_CLOSE:
@@ -239,6 +239,12 @@ static LRESULT CALLBACK wnd_proc(HWND hwnd, UINT msg, WPARAM wp, LPARAM lp) {
         ShowWindow(hwnd, SW_HIDE);
         return 0;
 
+
+    /* ---- middle-double-click: hide to tray ---- */
+    case WM_MBUTTONDBLCLK:
+        add_tray_icon(hwnd);
+        ShowWindow(hwnd, SW_HIDE);
+        return 0;
     case WM_DESTROY:
         remove_tray_icon();
         g_setup_done = false;

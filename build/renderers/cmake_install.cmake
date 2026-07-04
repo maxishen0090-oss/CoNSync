@@ -1,4 +1,4 @@
-# Install script for directory: F:/CoNSync/CoNSync-master/renderers
+# Install script for directory: F:/CNS/CoNSync/CoNSync-master/renderers
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,6 +40,6 @@ endif()
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "F:/CoNSync/CoNSync-master/build/renderers/install_local_manifest.txt"
+  file(WRITE "F:/CNS/CoNSync/CoNSync-master/build/renderers/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()
