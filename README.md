@@ -13,7 +13,7 @@ This project is a fork of [uxplay](https://github.com/antimof/UxPlay), rewritten
 
 ## Download & Install
 
-**[â¬?Download CoNSync_AirPlay_Receiver_Setup_1.74.exe](https://github.com/maxishen0090-oss/CoNSync/releases/latest)**
+**[â¬?Download CoNSync_AirPlay_Receiver_Setup_2026.7.2.exe](https://github.com/maxishen0090-oss/CoNSync/releases/latest)**
 
 > **Size:** 63 MB | **Requires:** Windows 10 64-bit or later
 
@@ -33,6 +33,7 @@ This project is a fork of [uxplay](https://github.com/antimof/UxPlay), rewritten
 - **H.264 / H.265 hardware-accelerated video decoding**
 - **AAC / ALAC audio streaming** with WASAPI output
 - **Low-latency** streaming with audio-video sync
+- **Multi-device concurrent streaming** â€” connect a second device while one is playing; old session auto-replaces
 
 ### Window Management
 - **Borderless frameless window** with Windows 11 rounded corners
