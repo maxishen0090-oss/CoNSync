@@ -1,5 +1,5 @@
 /**
- *  Copyright (C) 2018  Juho Vähä-Herttua
+ *  Copyright (C) 2018  Juho V盲h盲-Herttua
  *
  *  This library is free software; you can redistribute it and/or
  *  modify it under the terms of the GNU Lesser General Public
@@ -631,6 +631,13 @@ raop_handler_setup(raop_conn_t *conn,
         unsigned char eaeskey[72] = { 0 };
 
         logger_log(raop->logger, LOGGER_DEBUG, "SETUP 1");
+    // === Multi-device: Replace old active session if a new client connects ===
+    if (raop->active_conn && raop->active_conn != conn) {
+        logger_log(raop->logger, LOGGER_INFO,
+            "New client SETUP while session active. Replacing session...");
+    }
+    raop->active_conn = conn;
+
 
         // First setup
 

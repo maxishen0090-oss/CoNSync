@@ -1,4 +1,4 @@
-/**  Copyright (C) 2011-2012  Juho Vähä-Herttua
+/**  Copyright (C) 2011-2012  Juho V盲h盲-Herttua
  *
  *  This library is free software; you can redistribute it and/or
  *  modify it under the terms of the GNU Lesser General Public
@@ -96,6 +96,7 @@ struct raop_s {
 
   /* used for setting HLS video language choices */
     char *lang;
+    struct raop_conn_s *active_conn;  /* multi-device tracking */
 };
 
 struct raop_conn_s {
@@ -250,7 +251,7 @@ conn_request(void *ptr, http_request_t *request, http_response_t **response) {
         cseq = cseq_buf;
     }
 
-    /* ¨identify if request is a response to a BLE beacon */    
+    /* 篓identify if request is a response to a BLE beacon */    
     bool ble = false;
     if (!strcmp(protocol,"RTSP/1.0") && !cseq  && (strstr(url, "txtAirPlay") || strstr(url, "txtRAOP") )) {
         logger_log(raop->logger, LOGGER_INFO, "response to Bluetooth LE beacon advertisement received)");
