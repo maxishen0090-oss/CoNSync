@@ -1,0 +1,31 @@
+// CoNSync Resource File
+IDI_ICON1 ICON "CoNSync.ico"
+
+1 VERSIONINFO
+FILEVERSION     1,74,0,0
+PRODUCTVERSION  1,74,0,0
+FILEFLAGSMASK   0x3fL
+FILEFLAGS       0x0L
+FILEOS          0x40004L
+FILETYPE        0x1L
+FILESUBTYPE     0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName",      "CoNSync"
+            VALUE "FileDescription",  "CoNSync AirPlay Mirroring Server"
+            VALUE "FileVersion",      "1.74.0"
+            VALUE "InternalName",     "CoNSync"
+            VALUE "LegalCopyright",   "Copyright (C) 2026"
+            VALUE "OriginalFilename", "CoNSync.exe"
+            VALUE "ProductName",      "CoNSync"
+            VALUE "ProductVersion",   "1.74"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 0x04B0
+    END
+END

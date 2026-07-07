@@ -1,0 +1,33 @@
+﻿# Build
+build/
+*.o
+*.obj
+*.exe
+*.a
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.pyc
+
+# Backup
+huifu/
+huifu_perfect/
+CoNSync_D_Backup/
+
+# Release output (separately on GitHub Releases)
+Output/
+
+# Temp
+tmp_*.py
+tmp_*.ps1
+window_debug.txt
