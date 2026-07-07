@@ -36,7 +36,7 @@ It allows you to wirelessly mirror your iPhone, iPad, or Mac screen to your Wind
 - **Borderless fullscreen-style window** — no title bar, no borders
 - **Rounded corners** on Windows 11 (DWM API)
 - **Aspect-ratio locked resizing** — drag edges to scale proportionally
-- **Shift + drag** — move window by clicking anywhere inside it
+- **drag anywhere** — move window by clicking anywhere inside it
 - **Always-on-top toggle** — press F8
 
 ### 3. Window State Persistence
@@ -102,7 +102,7 @@ To restore: double-click the tray icon or right-click → Show Window.
 | `Ctrl + Mouse Wheel` | Adjust opacity |
 | `Ctrl + Plus (+)` | Increase opacity |
 | `Ctrl + Minus (-)` | Decrease opacity |
-| `Shift + Drag` | Move window (click anywhere inside) |
+| `Drag anywhere on the window` | Move window (click anywhere inside) |
 | `Ctrl + Shift + Q` | Hide window to tray |
 | Tray double-click | Restore window |
 | Tray right-click → Show Window | Restore window |
@@ -226,3 +226,4 @@ This project is a fork of [UxPlay](https://github.com/antimof/UxPlay), which was
 ## License
 
 GNU General Public License v3.0. See [LICENSE](LICENSE).
+
