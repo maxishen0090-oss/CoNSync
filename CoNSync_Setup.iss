@@ -1,13 +1,13 @@
 ﻿[Setup]
 AppId={{F8A9B1C2-D3E4-5F6A-7B8C-9D0E1F2A3B4C}
 AppName=CoNSync
-AppVersion=1.74 (2026.7)
+AppVersion=2026.8.7
 AppPublisher=CoNSync Open Source
 UninstallDisplayIcon={app}\CoNSync.ico
 DefaultDirName={autopf}\CoNSync
 DefaultGroupName=CoNSync
 OutputDir=.\Output
-OutputBaseFilename=CoNSync_Setup_v1.74
+OutputBaseFilename=CoNSync_Setup_v2026.8.7
 SetupIconFile=CoNSync.ico
 Compression=lzma2/ultra64
 SolidCompression=yes

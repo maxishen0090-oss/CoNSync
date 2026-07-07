@@ -1,4 +1,4 @@
-/**  Copyright (C) 2011-2012  Juho V盲h盲-Herttua
+﻿/**  Copyright (C) 2011-2012  Juho V鐩瞙鐩?Herttua
  *
  *  This library is free software; you can redistribute it and/or
  *  modify it under the terms of the GNU Lesser General Public
@@ -251,7 +251,7 @@ conn_request(void *ptr, http_request_t *request, http_response_t **response) {
         cseq = cseq_buf;
     }
 
-    /* 篓identify if request is a response to a BLE beacon */    
+    /* 绡搃dentify if request is a response to a BLE beacon */    
     bool ble = false;
     if (!strcmp(protocol,"RTSP/1.0") && !cseq  && (strstr(url, "txtAirPlay") || strstr(url, "txtRAOP") )) {
         logger_log(raop->logger, LOGGER_INFO, "response to Bluetooth LE beacon advertisement received)");
@@ -277,7 +277,7 @@ conn_request(void *ptr, http_request_t *request, http_response_t **response) {
                     logger_log(raop->logger, LOGGER_INFO, "*****\"nohold\" feature: switch to new connection request from %s", ipaddr);		  
                     httpd_remove_known_connections(raop->httpd);
                     if (raop->callbacks.video_reset) {
-                        raop->callbacks.video_reset(raop->callbacks.cls, RESET_TYPE_NOHOLD);
+                    // raop->callbacks.video_reset(raop->callbacks.cls, RESET_TYPE_NOHOLD);  // Disabled: allow concurrent sessions
                     }
                 } else {
                     logger_log(raop->logger, LOGGER_WARNING, "rejecting new connection request from %s", ipaddr);

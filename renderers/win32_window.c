@@ -354,6 +354,8 @@ static void apply_borderless(HWND hwnd) {
     LONG ex = GetWindowLong(hwnd, GWL_EXSTYLE);
     ex &= ~(WS_EX_DLGMODALFRAME|WS_EX_CLIENTEDGE|WS_EX_STATICEDGE);
     SetWindowLong(hwnd, GWL_EXSTYLE, ex);
+    SendMessage(hwnd, WM_SIZE, SIZE_RESTORED, 0);
+    InvalidateRect(hwnd, NULL, TRUE);
 
     HMODULE dm = LoadLibraryA("dwmapi.dll");
     if (dm) {

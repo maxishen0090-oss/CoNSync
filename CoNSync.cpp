@@ -78,7 +78,7 @@ extern HWND g_hwnd;
 #endif
 
 
-#define VERSION "2026.7.2"
+#define VERSION "2026.8.7"
 
 #define SECOND_IN_USECS 1000000
 #define SECOND_IN_NSECS 1000000000UL
