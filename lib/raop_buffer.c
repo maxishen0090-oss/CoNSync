@@ -1,5 +1,5 @@
 /**
- *  Copyright (C) 2011-2012  Juho Vähä-Herttua
+ *  Copyright (C) 2011-2012  Juho V?h?-Herttua
  *
  *  This library is free software; you can redistribute it and/or
  *  modify it under the terms of the GNU Lesser General Public
@@ -33,7 +33,7 @@
 #include "utils.h"
 #include "byteutils.h"
 
-#define RAOP_BUFFER_LENGTH 32
+#define RAOP_BUFFER_LENGTH 256
 
 typedef struct {
     /* Data available */

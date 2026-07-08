@@ -37,6 +37,7 @@ static gboolean async = FALSE;
 static gboolean vsync = FALSE;
 static gboolean sync = FALSE;
 static gboolean audio_rtp = FALSE;
+static int audio_discont_pending = 0;
 typedef struct audio_renderer_s {
     GstElement *appsrc; 
     GstElement *pipeline;
@@ -126,8 +127,8 @@ void audio_renderer_init(logger_t *render_logger, const char* audiosink, const b
     for (int i = 0; i < NFORMATS ; i++) {
         renderer_type[i] = (audio_renderer_t *)  calloc(1,sizeof(audio_renderer_t));
         g_assert(renderer_type[i]);
-        GString *launch = g_string_new("appsrc name=audio_source max-bytes=35280 ! ");
-        g_string_append(launch, "queue max-size-buffers=15 max-size-time=150000000 ! ");
+        GString *launch = g_string_new("appsrc name=audio_source ! ");
+        g_string_append(launch, "queue ! ");
         switch (i) {
         case 0:    /* AAC-ELD */
         case 2:    /* AAC-LC */
@@ -148,7 +149,7 @@ void audio_renderer_init(logger_t *render_logger, const char* audiosink, const b
             /* Normal path: local audio output */
             g_string_append (launch, "level ! ");
             g_string_append (launch, audiosink);
-            g_string_append (launch, " sync=false");
+            g_string_append (launch, " sync=false low-latency=true");
             async = FALSE;
             vsync = FALSE;
         } else {
@@ -320,6 +321,10 @@ void audio_renderer_render_buffer(unsigned char* data, int *data_len, unsigned s
         break;
     }
     if (valid) {
+    if (audio_discont_pending) {
+        GST_BUFFER_FLAG_SET(buffer, GST_BUFFER_FLAG_DISCONT);
+        audio_discont_pending = 0;
+    }
         gst_app_src_push_buffer(GST_APP_SRC(renderer->appsrc), buffer);
     } else {
         logger_log(logger, LOGGER_ERR, "*** ERROR invalid  audio frame (compression_type %d) skipped ", renderer->ct);
@@ -332,6 +337,7 @@ void audio_renderer_set_volume(double volume) {
     g_object_set(renderer->volume, "volume", volume, NULL);
 }
 void audio_renderer_flush() {
+    audio_discont_pending = 1;
 }
 void audio_renderer_destroy() {
     audio_renderer_stop();
