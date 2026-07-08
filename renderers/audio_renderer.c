@@ -19,19 +19,15 @@
  * along with this program; if not, write to the Free Software Foundation,
  * Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301  USA
  */
-
 #include <math.h>
 #include <gst/gst.h>
 #include <gst/app/gstappsrc.h>
 #include "audio_renderer.h"
 #define SECOND_IN_NSECS 1000000000UL
-
 #define NFORMATS 2     /* set to 4 to enable AAC_LD and PCM:  allowed, but  never seen in real-world use */
-
 static GstClockTime gst_audio_pipeline_base_time = GST_CLOCK_TIME_NONE;
 static logger_t *logger = NULL;
 const char * format[NFORMATS];
-
 static const gchar *avdec_aac = "avdec_aac";
 static const gchar *avdec_alac = "avdec_alac";
 static gboolean aac = FALSE;
@@ -41,7 +37,6 @@ static gboolean async = FALSE;
 static gboolean vsync = FALSE;
 static gboolean sync = FALSE;
 static gboolean audio_rtp = FALSE;
-
 typedef struct audio_renderer_s {
     GstElement *appsrc; 
     GstElement *pipeline;
@@ -51,22 +46,16 @@ typedef struct audio_renderer_s {
 } audio_renderer_t ;
 static audio_renderer_t *renderer_type[NFORMATS];
 static audio_renderer_t *renderer = NULL;
-
 /* GStreamer Caps strings for Airplay-defined audio compression types (ct) */
-
 /* ct = 1; linear PCM (uncompressed): 44100/16/2, S16LE */
 static const char lpcm_caps[]="audio/x-raw,rate=(int)44100,channels=(int)2,format=S16LE,layout=interleaved";
-
 /* ct = 2; codec_data is ALAC magic cookie:  44100/16/2 spf = 352 */    
 static const char alac_caps[] = "audio/x-alac,mpegversion=(int)4,channels=(int)2,rate=(int)44100,stream-format=raw,codec_data=(buffer)"
                            "00000024""616c6163""00000000""00000160""0010280a""0e0200ff""00000000""00000000""0000ac44";
-
 /* ct = 4; codec_data from MPEG v4 ISO 14996-3 Section 1.6.2.1:  AAC-LC 44100/2 spf = 1024 */
 static const char aac_lc_caps[] ="audio/mpeg,mpegversion=(int)4,channels=(int)2,rate=(int)44100,stream-format=raw,codec_data=(buffer)1210";
-
 /* ct = 8; codec_data from MPEG v4 ISO 14996-3 Section 1.6.2.1: AAC_ELD 44100/2  spf = 480 */
 static const char aac_eld_caps[] ="audio/mpeg,mpegversion=(int)4,channels=(int)2,rate=(int)44100,stream-format=raw,codec_data=(buffer)f8e85000";
-
 static gboolean check_plugins (void)
 {
     GstRegistry *registry = NULL;
@@ -93,13 +82,11 @@ static gboolean check_plugins (void)
     }
     return ret;
 }
-
 static gboolean check_plugin_feature (const gchar *needed_feature)
 {
     GstPluginFeature *plugin_feature = NULL;
     GstRegistry *registry = gst_registry_get ();
     gboolean ret = TRUE;
-
     plugin_feature = gst_registry_find_feature (registry, needed_feature, GST_TYPE_ELEMENT_FACTORY);
     if (!plugin_feature) {
         g_print ("Required gstreamer libav plugin feature '%s' not found:\n\n"
@@ -119,33 +106,28 @@ static gboolean check_plugin_feature (const gchar *needed_feature)
     }
     return ret;
 }
-
 bool gstreamer_init(){
     gst_init(NULL,NULL);    
     return (bool) check_plugins ();
 }
-
 void audio_renderer_init(logger_t *render_logger, const char* audiosink, const bool* audio_sync, const bool* video_sync, const char *artp_pipeline) {
     GError *error = NULL;
     GstCaps *caps = NULL;
     GstClock *clock = gst_system_clock_obtain();
     g_object_set(clock, "clock-type", GST_CLOCK_TYPE_REALTIME, NULL);
-
     audio_rtp = (bool) strlen(artp_pipeline);
     if (audio_rtp) {
         g_print("*** Audio RTP mode enabled: sending to %s\n", artp_pipeline);
     }
-
     logger = render_logger;
     
     aac = check_plugin_feature (avdec_aac);
     alac = check_plugin_feature (avdec_alac);
-
     for (int i = 0; i < NFORMATS ; i++) {
         renderer_type[i] = (audio_renderer_t *)  calloc(1,sizeof(audio_renderer_t));
         g_assert(renderer_type[i]);
-        GString *launch = g_string_new("appsrc name=audio_source ! ");
-        g_string_append(launch, "queue ! ");
+        GString *launch = g_string_new("appsrc name=audio_source max-bytes=35280 ! ");
+        g_string_append(launch, "queue max-size-buffers=15 max-size-time=150000000 ! ");
         switch (i) {
         case 0:    /* AAC-ELD */
         case 2:    /* AAC-LC */
@@ -162,31 +144,13 @@ void audio_renderer_init(logger_t *render_logger, const char* audiosink, const b
         g_string_append (launch, "audioconvert ! ");
         g_string_append (launch, "audioresample ! ");    /* wasapisink must resample from 44.1 kHz to 48 kHz */
         g_string_append (launch, "volume name=volume ! ");
-
         if (!audio_rtp) {
             /* Normal path: local audio output */
             g_string_append (launch, "level ! ");
             g_string_append (launch, audiosink);
-            switch(i) {
-            case 1:  /*ALAC*/
-                if (*audio_sync) {
-                    g_string_append (launch, " sync=true");
-                    async = TRUE;
-                } else {
-                    g_string_append (launch, " sync=false");
-                    async = FALSE;
-                }
-                break;
-            default:
-                if (*video_sync) {
-                    g_string_append (launch, " sync=true");
-                    vsync = TRUE;
-                } else {
-                    g_string_append (launch, " sync=false");
-                    vsync = FALSE;
-                }
-                break;
-            }
+            g_string_append (launch, " sync=false");
+            async = FALSE;
+            vsync = FALSE;
         } else {
             /* RTP path: send decoded PCM over RTP */
             /* rtpL16pay requires S16BE (big-endian) format */
@@ -199,7 +163,6 @@ void audio_renderer_init(logger_t *render_logger, const char* audiosink, const b
           g_error ("gst_parse_launch error (audio %d):\n %s\n", i+1, error->message);
           g_clear_error (&error);
         }
-
         g_assert (renderer_type[i]->pipeline);
         gst_pipeline_use_clock(GST_PIPELINE_CAST(renderer_type[i]->pipeline), clock);
         renderer_type[i]->bus = gst_element_get_bus(renderer_type[i]->pipeline);
@@ -237,7 +200,6 @@ void audio_renderer_init(logger_t *render_logger, const char* audiosink, const b
         g_object_unref(clock);
     }
 }
-
 void audio_renderer_stop() {
     if (renderer) {
         gst_app_src_end_of_stream(GST_APP_SRC(renderer->appsrc));
@@ -245,7 +207,6 @@ void audio_renderer_stop() {
         renderer = NULL;
     }
 }
-
 static void get_renderer_type(unsigned char *ct, int *id) {
     render_audio = FALSE;
     *id = -1;
@@ -281,7 +242,6 @@ static void get_renderer_type(unsigned char *ct, int *id) {
         break;
     }
 }
-
 void  audio_renderer_start(unsigned char *ct) {
     int id = -1;
     get_renderer_type(ct, &id);
@@ -303,12 +263,9 @@ void  audio_renderer_start(unsigned char *ct) {
         logger_log(logger, LOGGER_ERR, "unknown audio compression type ct = %d", *ct);
     }
 }
-
 void audio_renderer_render_buffer(unsigned char* data, int *data_len, unsigned short *seqnum, uint64_t *ntp_time) {
     GstBuffer *buffer = NULL;
-
     if (!render_audio) return;    /* do nothing unless render_audio == TRUE */
-
     GstClockTime pts = (GstClockTime) *ntp_time ;    /* now in nsecs */
     //GstClockTimeDiff latency = GST_CLOCK_DIFF(gst_element_get_current_clock_time (renderer->appsrc), pts);
     if (sync) {
@@ -321,7 +278,6 @@ void audio_renderer_render_buffer(unsigned char* data, int *data_len, unsigned s
         }
     }
     if (data_len == 0 || renderer == NULL) return;
-
     /* all audio received seems to be either ct = 8 (AAC_ELD 44100/2 spf 460 ) AirPlay Mirror protocol *
      * or ct = 2 (ALAC 44100/16/2 spf 352) AirPlay protocol.                                           *
      * first byte data[0] of ALAC frame is 0x20,                                                       *
@@ -370,16 +326,13 @@ void audio_renderer_render_buffer(unsigned char* data, int *data_len, unsigned s
         logger_log(logger, LOGGER_ERR, "***       first byte of invalid frame was  0x%2.2x ", (unsigned int) data[0]);
     }
 }
-
 void audio_renderer_set_volume(double volume) {
     volume = (volume > 10.0) ? 10.0 : volume;
     volume = (volume < 0.0) ? 0.0 : volume;
     g_object_set(renderer->volume, "volume", volume, NULL);
 }
-
 void audio_renderer_flush() {
 }
-
 void audio_renderer_destroy() {
     audio_renderer_stop();
     for (int i = 0; i < NFORMATS ; i++ ) {
@@ -394,7 +347,6 @@ void audio_renderer_destroy() {
         free(renderer_type[i]);
     }
 }
-
 static gboolean gstreamer_audio_pipeline_bus_callback(GstBus *bus, GstMessage *message, void *loop) {
     switch (GST_MESSAGE_TYPE(message)) {
     case GST_MESSAGE_ERROR: {
@@ -426,7 +378,6 @@ static gboolean gstreamer_audio_pipeline_bus_callback(GstBus *bus, GstMessage *m
     }
     return TRUE;
 }
-
 unsigned int audio_renderer_listen(void *loop, int id) {
     g_assert(id >= 0 && id < NFORMATS);
     return (unsigned int) gst_bus_add_watch(renderer_type[id]->bus,(GstBusFunc)

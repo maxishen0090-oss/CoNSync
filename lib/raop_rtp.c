@@ -1,5 +1,5 @@
 /**
- *  Copyright (C) 2011-2012  Juho Vähä-Herttua
+ *  Copyright (C) 2011-2012  Juho V?h?-Herttua
  *
  *  This library is free software; you can redistribute it and/or
  *  modify it under the terms of the GNU Lesser General Public
@@ -324,7 +324,7 @@ raop_rtp_process_events(raop_rtp_t *raop_rtp, void *cb_data)
 
     /* Call set_volume callback if changed */
     if (volume_changed) {
-        //raop_buffer_flush(raop_rtp->buffer, flush); /* seems to be unnecessary, may cause audio artefacts */
+
         if (raop_rtp->callbacks.audio_set_volume) {
             raop_rtp->callbacks.audio_set_volume(raop_rtp->callbacks.cls, volume);
         }
@@ -332,6 +332,7 @@ raop_rtp_process_events(raop_rtp_t *raop_rtp, void *cb_data)
 
     /* Handle flush if requested */
     if (flush != NO_FLUSH) {
+        //raop_buffer_flush(raop_rtp->buffer, flush); /* clock alignment handles discont */
         if (raop_rtp->callbacks.audio_flush) {
             raop_rtp->callbacks.audio_flush(raop_rtp->callbacks.cls);
         }
@@ -615,9 +616,12 @@ raop_rtp_thread_udp(void *arg)
             assert(result >= 0);
 
             if (!raop_rtp->initial_sync) {
-                /* wait until the first sync before dequeing ALAC */
-                continue;
-            } else {
+                /* Soft start: create temporary sync from first audio packet */
+                raop_rtp->client_ntp_sync = raop_ntp_get_local_time();
+                raop_rtp->rtp_sync = byteutils_get_int_be(packet, 4);
+                raop_rtp->initial_sync = true;
+                logger_log(raop_rtp->logger, LOGGER_INFO, "audio soft start: initial sync estimated");
+            }
             // Render continuous buffer entries
                 void *payload = NULL;
                 unsigned int payload_size = 0;
@@ -651,7 +655,6 @@ raop_rtp_thread_udp(void *arg)
                 if (!no_resend) {
                     raop_buffer_handle_resends(raop_rtp->buffer, raop_rtp_resend_callback, raop_rtp);
                 }
-            }
         }
     }
 
@@ -841,7 +844,6 @@ raop_rtp_stop(raop_rtp_t *raop_rtp)
     }
 
     /* Flush buffer into initial state */
-    raop_buffer_flush(raop_rtp->buffer, -1);
 
     /* Mark thread as joined */
     MUTEX_LOCK(raop_rtp->run_mutex);
@@ -858,3 +860,4 @@ raop_rtp_is_running(raop_rtp_t *raop_rtp)
     MUTEX_UNLOCK(raop_rtp->run_mutex);
     return running;
 }
+

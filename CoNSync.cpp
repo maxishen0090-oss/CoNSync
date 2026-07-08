@@ -78,7 +78,7 @@ extern HWND g_hwnd;
 #endif
 
 
-#define VERSION "2026.8.7"
+#define VERSION "2026.8.8"
 
 #define SECOND_IN_USECS 1000000
 #define SECOND_IN_NSECS 1000000000UL
@@ -2466,7 +2466,6 @@ extern "C" void video_resume (void *cls) {
 
 extern "C" void audio_flush (void *cls) {
     if (use_audio) {
-        audio_renderer_flush();
     }
 }
 
